@@ -1,0 +1,17 @@
+{
+  "name": "jnjkotesol-conference",
+  "version": "1.0.0",
+  "description": "2019 KOTESOL National Conference web app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/app.js"
+  },
+  "author": "Aaron Snowberger",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4",
+    "http-errors": "^1.7.2",
+    "pug": "^2.0.3"
+  }
+}
