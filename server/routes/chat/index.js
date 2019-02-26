@@ -3,11 +3,7 @@ const router = express.Router();
 
 module.exports = () => {
   router.get( '/', (req, res, next ) => {
-    return res.render( 'feedback' );
-  });
-
-  router.post( '/', (req, res, next ) => {
-    return res.send(`Feedback submitted`);
+    return res.render( 'chat' );
   });
 
   return router;

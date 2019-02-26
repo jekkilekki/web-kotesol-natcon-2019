@@ -1,2 +1,38 @@
 //- Page: Chat
 extends layout/index
+block content
+  section.page-section.chat.gradient
+  .container.small
+    //
+      <header class="chat-header">
+      <h4 class="h3 chat-title">Conference Chat</h4>
+      <p class="text-muted">Welcome...add your message using the form to the side.</p>
+      </header>
+    article.chat-window
+      .panel.chat-panel.panel-default
+        h4.page-section-title Conference Chat
+        .panel-body.chat-display
+        // panel-body
+      // chat-header
+      form.form-horizontal.chat-form(name='chatForm')
+        .form-group.name-form-group
+          label.col-sm-2.control-label(for='chat-username') Name
+          .col-sm-10
+            input#chat-username.form-control(type='text', required='', placeholder='Your name')
+          // col-sm-10
+        // form-group
+        .form-group
+          label.col-sm-2.control-label(for='chat-message') Message
+          .col-sm-10
+            .input-group
+              input#chat-message.form-control(type='text', placeholder='Your message, then ENTER', rows='2', autocomplete='off', required='')
+              span.input-group-btn
+                button#chat-submit.button.form-submit(type='submit')
+                  i.fa.fa-comments-o
+                  |  Send
+            // input-group
+          // col-sm-10
+        // form-group
+      // panel-default
+    // article
+  // container

@@ -1,4 +1,9 @@
 //- Page: Index (Home page)
+extends layout/index
+block hero
+  include partials/hero
+  include partials/whatis
+
 block content
   section.site-header
   .hero
@@ -15,22 +20,22 @@ block content
 
   section.page-section.keypts
     h1 KeyPts
-    include keypts
+    include partials/keypts
 
   section.page-section.speakers
-    include speaker-grid 
+    include partials/speaker-grid 
 
   section.page-section.schedule.parallax 
-    include schedule 
+    include partials/schedule-table 
 
   section.page-section.buzz 
-    include buzz 
+    include partials/buzz-grid
   
   section.page-section.gallery 
-    include gallery 
+    include partials/gallery-grid
 
   section.page-section.sponsors 
-    include sponsors-list 
+    include partials/sponsors-list 
 
   section.conference-map
-    include map 
+    include partials/map 
