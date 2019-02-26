@@ -1,8 +1,6 @@
 //- Page: Index (Home page)
-extends layout/index
 block content
   section.site-header
-  //-   <% if ( pageID == 'home' ) { %>
   .hero
   .flex-it.container
     .left-half
@@ -14,12 +12,7 @@ block content
       a(href='button btn') Get notified
     .right-half
   section.page-section.whatis
-    //- <% include ../content/whatis.ejs %>
 
-  //- <% if ( pageID !== 'home' ) { %>
-  //- .hero-small
-  //-   a(href='/')
-  //-     img(src='/img/kotesol-natcon-2019-call-for-proposals-date.png')
   section.page-section.keypts
     h1 KeyPts
     include keypts
