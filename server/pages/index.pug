@@ -1,0 +1,43 @@
+//- Page: Index (Home page)
+extends layout/index
+block content
+  section.site-header
+  //-   <% if ( pageID == 'home' ) { %>
+  .hero
+  .flex-it.container
+    .left-half
+      h2.page-title Join us at the 2019 KOTESOL National Conference
+      h3.page-subtitle
+        | May 18, 2019, 
+        a(href='/location') Jeonju
+      p.page-note Pre-registration opens soon!
+      a(href='button btn') Get notified
+    .right-half
+  section.page-section.whatis
+    //- <% include ../content/whatis.ejs %>
+
+  //- <% if ( pageID !== 'home' ) { %>
+  //- .hero-small
+  //-   a(href='/')
+  //-     img(src='/img/kotesol-natcon-2019-call-for-proposals-date.png')
+  section.page-section.keypts
+    h1 KeyPts
+    include keypts
+
+  section.page-section.speakers
+    include speaker-grid 
+
+  section.page-section.schedule.parallax 
+    include schedule 
+
+  section.page-section.buzz 
+    include buzz 
+  
+  section.page-section.gallery 
+    include gallery 
+
+  section.page-section.sponsors 
+    include sponsors-list 
+
+  section.conference-map
+    include map 

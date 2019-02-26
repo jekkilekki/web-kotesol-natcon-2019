@@ -1,14 +1,22 @@
 const express = require( 'express' );
+const reload = require( 'reload' );
+
 const createError = require( 'http-errors' );
+const http = require( 'http' );
 const path = require( 'path' ); // from Node.js
 const app = express();
+
+app.set( 'port', process.env.PORT || 3000 );
+
+app.locals.siteTitle = '2019 Korea TESOL National Conference';
+// app.locals.allSpeakers = dataFile.speakers;
 
 // Using Pug to create our Template files now (Express default)
 app.set( 'view engine', 'pug' );
 if ( app.get( 'env' ) === 'development' ) {
   app.locals.pretty = true; // make non-minimized HTML from Pug
 }
-app.set( 'views', path.join( __dirname, './views' ) );
+app.set( 'views', path.join( __dirname, './pages' ) );
 
 const routes = require( './routes' );
 app.use( express.static( 'public' ) );
@@ -29,6 +37,12 @@ app.use((err, req, res, next) => {
   return res.render('notfound');
 });
 
-app.listen( 3000 );
+var server = http.createServer(app)
+
+reload( app );
+
+server.listen( app.get( 'port' ), function() {
+  console.log( 'Listening on port ' + app.get( 'port' ) );
+});
 
 module.export = app;
