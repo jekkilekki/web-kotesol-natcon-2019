@@ -2,20 +2,25 @@
 extends layout/index
 block hero
   //- include partials/hero
-  img(src='/design/web/kotesol-natcon-2019-cloud-wide.jpg')
+  figure.hero
+    img(src='/design/web/kotesol-natcon-2019-cloud-wide.jpg')
   include partials/whatis
 
 block content
   section.site-header
-  //- .hero
-  .flex-it.container
+    //- .hero
+  .conference-info.container
+    img.conference-logo(src='/design/web/kotesol-natcon-2019-logo.png')
+    h2.conference-title Join us at the 2019 KOTESOL National Conference!
     .left-half
-      h2.page-title Join us at the 2019 KOTESOL National Conference
       h3.page-subtitle
-        | May 25, 2019, n
+        | May 25, 2019, 
         a(href='/location') Jeonju
-      p.page-note Pre-registration opens soon!
-      a(href='button btn') Get notif
+      p.page-note 
+        | Pre-registration opens soon!
+        br 
+        | Interested in presenting? 
+        a(href='button btn') Submit a Talk
     .right-half
   section.page-section.whatis
 

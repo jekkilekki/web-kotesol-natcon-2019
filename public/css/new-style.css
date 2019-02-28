@@ -464,16 +464,16 @@ li {
 # Navigation
 --------------------------------------------------------------*/
 .with-call {
-  transform: translateY(108px);
+  transform: translateY(110px);
 }
 
 .call-to-action {
   background: #00b9f1;
   color: white;
   position: absolute;
-  top: -108px;
+  top: -110px;
   width: 100vw;
-  height: 108px;
+  height: 110px;
 }
 
 .call-to-action p {
@@ -483,6 +483,17 @@ li {
 .call-title {
   font-size: 1.5rem;
     margin-bottom: 0.25rem;
+}
+
+.call-to-action .btn {
+  position: absolute;
+    top: 50%;
+    right: 2em;
+    transform: translateY(-50%);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    color: #60f;
+    background: #e1e1e1;
 }
 
 .call-to-action .container {
@@ -498,7 +509,7 @@ li {
   position: fixed;
   top: 0;
   width: 100vw;
-  background: #004369;
+  background: #201b48;
   /* font-weight: bold; */
   /* text-align: right; */
   color: white;
@@ -539,8 +550,8 @@ li {
 }
 
 .site-title {
-  padding: 1rem 2rem;
-  background: purple;
+  padding: 1rem 0rem 1rem 2rem;
+  background: #201b48;
   margin-right: 0;
 }
 
@@ -601,10 +612,14 @@ li {
   padding: 0;
 }
 
-.banner-location {
+.header-top .banner-location {
+  font-size: 75%;
+  top: 0;
+  font-weight: 300;
   display: inline-block;
-  position: relative;
-  top: 3px;
+}
+.banner-location a {
+  font-weight: 600;
 }
 
 @media screen and (max-width: 38rem) {
@@ -615,6 +630,7 @@ li {
 
 .banner-right {
   text-align: right;
+  transform: translateY(15%);
 }
 
 .site-banner a {
@@ -624,7 +640,7 @@ li {
 
 .site-banner a:hover {
   border: none;
-  color: #FF1926;
+  color: #00f2e6;
 }
 
 .site-menu-bar {
@@ -712,7 +728,7 @@ li {
   padding: 0.5rem 1rem;
   background: white;
   font-weight: 400;
-  color: #ff1926;
+  color: #00f2e6;
   outline: none;
   border: none;
   border-radius: 3px;
@@ -731,14 +747,14 @@ li {
 }
 
 .site-mobile-menu-button:hover {
-  background: #FF1926;
+  background: #00f2e6;
   color: white;
   box-shadow: 0px 6px 20px rgba(0,0,0,0.36);
 }
 
 .site-mobile-menu-button .fa {
   display: none;
-  color: #ff1926;
+  color: #00f2e6;
 }
 
 .site-mobile-menu-button:active .fa,
@@ -815,7 +831,7 @@ li {
 
 .logo:before,
 .site-menu-item a:before {
-  background: #FF1926;
+  background: #00f2e6;
   content: "";
   position: absolute;
   bottom: -10px;
@@ -835,16 +851,33 @@ li {
   transform: scaleX(1.1);
 }
 
+.conference-info {
+  position: absolute;
+    top: 20vw;
+    color: white;
+    width: 100%;
+    text-shadow: 0 2px 2px #201b48;
+    text-align: center;
+}
+
+.conference-title {
+  /* max-width: 900px; */
+  margin: 0 auto;
+  /* font-size: 3rem; */
+  margin-top: 10rem;
+  margin-bottom: 3rem;
+}
+
 /*--------------------------------------------------------------
 # Links
 --------------------------------------------------------------*/
 a {
-  color: #FF1926;
+  color: #00f2e6;
   text-decoration: none;
 }
 
 a:hover {
-  border-bottom: 3px solid #FF1926;
+  border-bottom: 3px solid #00f2e6;
 }
 
 /*--------------------------------------------------------------
@@ -938,19 +971,25 @@ body {
   text-align: center;
 /*   padding-bottom: 6rem; */
   margin: 0;
-  /* top: 60px; */
-  background-image: url('../design/web/kotesol-natcon-2019-wide-logo-right.jpg'); 
-  background-size: cover; 
-  background-position: center; 
   position: relative;
   width: 100vw; 
-  height: calc( 100vh - 90px );
+  /* height: 50vw; */
   overflow: hidden;
+}
+
+.hero:after {
+  display: block;
+  position: relative;
+  background-image: linear-gradient(to bottom, transparent 0%, #371e83 100%);
+  margin-top: -50vw;
+  height: 50vw;
+  width: 100%;
+  content: '';
 }
 
 @media screen and (max-width: 32rem) {
   .hero {
-    height: calc( 100vh - 60px );
+    /* height: calc( 100vh - 60px ); */
     /* top: 80px; */
   }
 }
@@ -1007,7 +1046,7 @@ body {
   font-weight: bold;
   line-height: 1rem;
   text-align: center;
-  background: #FF1926;
+  background: #00f2e6;
   padding: 5px 10px;
   border-radius: 3px;
   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.36);
@@ -1019,7 +1058,7 @@ body {
   border: none;
   box-shadow: 0px 6px 20px rgba(0,0,0,0.36);
   background: white;
-  color: #FF1926;
+  color: #00f2e6;
 }
 
 a.ticket-button {
@@ -1175,8 +1214,8 @@ a.ticket-button {
 
 .page-button {
   background: white;
-  color: #FF1926;
-  border: 1px solid #ff1926;
+  color: #00f2e6;
+  border: 1px solid #00f2e6;
   border-radius: 3px;
   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.36);
   cursor: pointer;
@@ -1189,7 +1228,7 @@ a.ticket-button {
 }
 
 .page-button:hover {
-  background: #FF1926;
+  background: #00f2e6;
   color: white;
 }
 
@@ -1400,7 +1439,7 @@ a.ticket-button {
 
 p.speaker-name {
   font-weight: 300;
-  color: #FF1926;
+  color: #00f2e6;
 /*   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 1.25rem; */
@@ -1853,7 +1892,7 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 }
 
 .keypts {
-  background: #FF1926;
+  background: #00f2e6;
   padding: 5rem 0 3rem;
   margin: 0;
   color: white;
@@ -1968,7 +2007,7 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 
 .grid-item:hover {
   background: #FFF;
-  /* border: 1px solid #FF1926; */
+  /* border: 1px solid #00f2e6; */
   cursor: pointer;
 }
 
@@ -1994,7 +2033,7 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 }
 
 .grid-title {
-  border: 1px solid #FF1926;
+  border: 1px solid #00f2e6;
 }
 
 .grid-title a {
@@ -2007,7 +2046,7 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 
 .grid-title,
 .grid-title a {
-  background: #FF1926;
+  background: #00f2e6;
   color: white;
   transition: all 0.3s;
 }
@@ -2015,7 +2054,7 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 .grid-title:hover a,
 .grid-title a:hover {
     background: white;
-  color: #FF1926;
+  color: #00f2e6;
   /* border: none; */
 }
 
@@ -2204,7 +2243,7 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   height: 160px;
   border-bottom-left-radius: 160px;
   border-top-left-radius: 160px;
-  background-color: #ff1926;
+  background-color: #00f2e6;
   right: 0px;
   bottom: -80px;
   z-index: 10;
@@ -2341,14 +2380,14 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 }
 
 .social-nav li a:hover {
-  color: #FF1926;
+  color: #00f2e6;
   box-shadow: 0px 6px 20px rgba(0,0,0,0.36);
   background: white;
 }
 
 .social-nav li a:focus,
 .social-nav li a:active {
-  color: #FF1926;
+  color: #00f2e6;
   box-shadow: 0px 2px 4px rgba(0,0,0,0.36);
   background: white;
 }
@@ -2457,16 +2496,16 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   height: 150px;
   float: left;
   margin-right: 6rem;
-  background: #FF1926;
+  background: #00f2e6;
   transform: rotate(45deg);
   position: relative;
   top: 1rem;
   left: 2rem;
   overflow: hidden;
 /*   padding: 5px; */
-/*   border: 5px solid #FF1926;
+/*   border: 5px solid #00f2e6;
   border: 5px solid green;
-  border-image-source: linear-gradient(#FF1926, #fff);
+  border-image-source: linear-gradient(#00f2e6, #fff);
   border-image-slice: 30;
 /*   padding: 2em;
 }
@@ -2558,8 +2597,8 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 
 @media screen and (min-width: 30rem) {
   #speakers article.speaker .grid-item {
-      /* border: 2px solid #FF1926;
-      border-image-source: linear-gradient(#FF1926, #fff);
+      /* border: 2px solid #00f2e6;
+      border-image-source: linear-gradient(#00f2e6, #fff);
       border-image-slice: 30; */
   }
 }
@@ -2779,10 +2818,10 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 #speaker-single .grid-item.photo,
 #team .grid-item.photo {
     /* margin-top: -2rem; */
-    /* background: #FF1926; */
+    /* background: #00f2e6; */
     z-index: 5;
-    /* border: 1px solid #FF1926; */
-    /* border-image-source: linear-gradient(#FF1926, #fff); */
+    /* border: 1px solid #00f2e6; */
+    /* border-image-source: linear-gradient(#00f2e6, #fff); */
     /* border-image-slice: 30; */
     /* margin-left: 70%; */
 }
@@ -3262,7 +3301,7 @@ h2.accomodation {
     font-weight: bold;
     line-height: 1rem;
     text-align: center;
-    background: #FF1926;
+    background: #00f2e6;
     padding: 10px 20px;
     border-radius: 3px;
     box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.36);
@@ -3274,18 +3313,18 @@ h2.accomodation {
 
   .button-inverse {
     background: white;
-    color: #FF1926;
+    color: #00f2e6;
   }
 
   .button:hover {
     border: none;
     box-shadow: 0px 6px 20px rgba(0,0,0,0.36);
     background: white;
-    color: #FF1926;
+    color: #00f2e6;
   }
 
   .button-inverse:hover {
-    background: #FF1926;
+    background: #00f2e6;
     color: white;
   }
 
@@ -4069,21 +4108,19 @@ h4.sponsor-section-title {
 }
 .header-top {
   display: flex;
-  background: black;
+  background: #0f0f30;
   justify-content: space-between;
   padding: 0.5rem 2rem 0.5rem 1rem;
 }
 .header-top h1 {
   display: inline-block;
-  font-size: 1.1rem;
+  font-size: 1.95rem;
   font-weight: 500;
   margin-top: 2px;
 }
-.header-top .banner-location {
-  font-size: 1rem;
-  top: 0;
-  font-weight: 300;
-}
-.banner-location a {
-  font-weight: 600;
+
+
+.top-buttons {
+  float: right;
+  margin-left: 0.5rem;
 }
