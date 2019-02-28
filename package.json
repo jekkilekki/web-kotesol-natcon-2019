@@ -1,11 +1,11 @@
 {
-  "name": "jnjkotesol-conference",
+  "name": "kotesol-natcon-2019",
   "version": "1.0.0",
   "description": "2019 KOTESOL National Conference web app",
   "main": "server/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon -e css,pug,js,json --watch app --ignore feedback.json"
+    "start": "nodemon -e css,pug,js,json --watch server --watch public --ignore feedback.json"
   },
   "author": "Aaron Snowberger",
   "license": "MIT",

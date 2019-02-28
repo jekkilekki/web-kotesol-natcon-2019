@@ -1,11 +1,9 @@
-const express = require( 'express' );
-const reload = require( 'reload' );
+var express = require( 'express' );
+var reload = require( 'reload' );
 
 const createError = require( 'http-errors' );
-const http = require( 'http' );
 const path = require( 'path' ); // from Node.js
-
-const app = express();
+var app = express();
 
 app.set( 'port', process.env.PORT || 3000 );
 
@@ -40,12 +38,10 @@ app.use((err, req, res, next) => {
   return res.render('notfound');
 });
 
-var server = http.createServer(app)
+var server = app.listen( app.get( 'port' ), function() {
+  console.log( 'Listening on port ' + app.get( 'port' ) ); 
+});
 
 reload( app );
-
-server.listen( app.get( 'port' ), function() {
-  console.log( 'Listening on port ' + app.get( 'port' ) );
-});
 
 module.export = app;

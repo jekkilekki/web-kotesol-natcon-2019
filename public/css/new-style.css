@@ -1,6 +1,6 @@
 /*
 WordPress style CSS comment/structure
-Site Name: Jeonju-North Jeolla KOTESOL Regional Conference
+Site Name: 2019 KOTESOL National Conference
 Repo URI: https://github.com/jekkilekki/jnjkotesol.com
 Author: Aaron Snowberger
 Author URI: https://aaron.kr
@@ -9,7 +9,7 @@ Version: 1.0.0
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 LICENSE
-Copyright 2017 Aaron Snowberger
+Copyright 2019 Aaron Snowberger
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -164,7 +164,7 @@ sub {
 img {
 	border: 0;
 	display: block;
-  /*max-width: 100%;*/
+  max-width: 100%;
 }
 
 svg:not(:root) {
@@ -340,12 +340,12 @@ th {
 # Typography
 --------------------------------------------------------------*/
 body {
-  font-family: "Roboto Condensed", "Fira Sans Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Nunito", "Roboto", "Fira Sans Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: #232323;
 }
 
 p {
-  font-family: "Roboto Condensed", "Fira Sans Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Nunito", "Roboto", "Fira Sans Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 1rem;
   margin-bottom: 1.5rem;
   line-height: 1.4;
@@ -359,7 +359,7 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Zilla Slab", "EB Garamond", serif;
+  font-family: "Open Sans Condensed", "EB Garamond", serif;
   margin-bottom: 0.75rem;
   margin-top: 1.5rem;
   font-weight: 900;
@@ -407,7 +407,7 @@ h6 {
 }
 
 .red-text {
-  color: #ff1926!important;
+  color: #ec174f!important;
 }
 
 .center {
@@ -426,7 +426,7 @@ h6 {
 # Formattings
 --------------------------------------------------------------*/
 hr {
-	background-color: #ccc;
+	background-color: #95a4b1;
 	border: 0;
 	height: 1px;
 	margin-bottom: 1.5em;
@@ -463,6 +463,37 @@ li {
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
+.with-call {
+  transform: translateY(108px);
+}
+
+.call-to-action {
+  background: #00b9f1;
+  color: white;
+  position: absolute;
+  top: -108px;
+  width: 100vw;
+  height: 108px;
+}
+
+.call-to-action p {
+  opacity: 0.8;
+}
+
+.call-title {
+  font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.call-to-action .container {
+  position: relative;
+}
+
+.right {
+  position: absolute;
+  right: 0;
+}
+
 .site-banner {
   position: fixed;
   top: 0;
@@ -474,8 +505,12 @@ li {
   /* height: 65px; */
   z-index: 100;
   /* margin-bottom: 65px; */
-  border-bottom: 5px solid cyan;
+  /* border-bottom: 5px solid #00f2e6; */
   box-shadow: 0px 1px 4px rgba(0,0,0,0.14);
+}
+
+.site-banner.with-call {
+  top: 160px;
 }
 
 .site-banner .container {
