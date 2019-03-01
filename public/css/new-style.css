@@ -474,6 +474,8 @@ li {
   top: -110px;
   width: 100vw;
   height: 110px;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .call-to-action p {
@@ -858,6 +860,7 @@ li {
     width: 100%;
     text-shadow: 0 2px 2px #201b48;
     text-align: center;
+    margin: 0 auto;
 }
 
 .conference-title {
@@ -866,6 +869,33 @@ li {
   /* font-size: 3rem; */
   margin-top: 10rem;
   margin-bottom: 3rem;
+}
+
+.conference-info .page-subtitle {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.conference-logo {
+  /* max-width: 90%; */
+  transition: all 0.1s;
+  margin: 0 auto 6rem;
+}
+
+.conference-logo:hover,
+.conference-logo:focus,
+.conference-logo:active {
+  /* max-width: 100%;
+  margin-top: -5%; */
+  transform: scale(1.2);
+}
+
+.conference-info .page-note {
+  margin: 2rem auto;
+}
+
+.presented-by img {
+  margin: 1rem auto;
 }
 
 /*--------------------------------------------------------------
@@ -1249,10 +1279,11 @@ a.ticket-button {
 } */
 
 .whatis {
-  background: #ffcc00;
+  background: #371e83;
   padding: 3rem 0;
-  position: absolute;
-  bottom: 0;
+  color: white;
+  /* position: absolute; */
+  /* bottom: 0; */
 }
 
 .whatiskotesol {
@@ -1270,7 +1301,7 @@ a.ticket-button {
 }
 
 .whatiskotesol h2 {
-  font-family: "Zilla Slab", "EB Garamond", serif;
+  font-family: "Open Sans Condensed", "EB Garamond", serif;
   font-style: bold;
   margin-top: -5px;
   margin-bottom: 0;
@@ -1279,7 +1310,7 @@ a.ticket-button {
 
 .whatiskotesol p {
   margin-bottom: 0;
-  font-size: 1.4rem;
+  /* font-size: 1.4rem; */
   font-weight: 300;
 }
 
@@ -1518,7 +1549,7 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 }
 
 .schedule {
-  background: url("../img/bg/jeonju.jpg");
+  background: url("../design/web/kotesol-natcon-2019-sky-only.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -4123,4 +4154,64 @@ h4.sponsor-section-title {
 .top-buttons {
   float: right;
   margin-left: 0.5rem;
+}
+
+/**
+ * Countdown Clock
+ */
+ .countdown-clock {
+  /* width: 560px; */
+  /* height: 120px; */
+  /* position: absolute; */
+  /* top: 0px; */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  /* color: $color__dark_blue; */
+  /* opacity: 0.3; */
+  /* border-top: 2px solid $color__dark_blue; */
+  /* border-bottom: 2px solid $color__dark_blue; */
+}
+.pie {
+  fill: transparent;
+  stroke: white;
+  stroke-width: 100;
+  stroke-dasharray: 0 100;
+  transition: stroke-dasharray .3s ease;
+}
+.pie-plate {
+  position: absolute;
+  top: -12px;
+  /* left: -20px; */
+  z-index: -1; 
+  background: transparent;
+  border-radius: 50%;
+  display: block;
+  transform: rotate(-90deg);
+  opacity: 0.2;
+}
+
+#countdown {
+  list-style: none;
+  margin-bottom: 1em;
+}
+#countdown li {
+  display: inline-block;
+  margin: 0rem 0.25rem;
+  /* padding-right: 1.5rem; */
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+#countdown .number {
+  font-size: 2em;
+  width: 100px;
+  text-align: center;
+  margin-top: 5px; /* Negative left-right margins to account for 100+ number in the Days countdown
+  /* padding: 0;
+  line-height: 1; */
+}
+#countdown .label {
+  margin-top: -5px;
+  width: 100px;
 }

@@ -9,19 +9,53 @@ block hero
 block content
   section.site-header
     //- .hero
-  .conference-info.container
-    img.conference-logo(src='/design/web/kotesol-natcon-2019-logo.png')
-    h2.conference-title Join us at the 2019 KOTESOL National Conference!
-    .left-half
+  .conference-info
+    .container
       h3.page-subtitle
         | May 25, 2019, 
         a(href='/location') Jeonju
+      img.conference-logo(src='/design/web/kotesol-natcon-2019-logo.png')
+      //- h2.conference-title Join us at the 2019 KOTESOL National Conference!
+      //- .countdown
+      //-   p 137
+      //-     span days
+      //-   p 12
+      //-     span hrs
+      //-   p 4
+      //-     span mins
+      //-   p 23
+      //-     span sec
+      aside.countdown-clock
+        ul#countdown
+          li#days
+            .number 00
+            .label Days
+            svg.pie-plate(width='100', height='100')
+              circle.pie(r='50', cx='50', cy='50')
+          li#hours
+            .number 00
+            .label Hours
+            svg.pie-plate(width='100', height='100')
+              circle.pie(r='50', cx='50', cy='50')
+          li#minutes
+            .number 00
+            .label Minutes
+            svg.pie-plate(width='100', height='100')
+              circle.pie(r='50', cx='50', cy='50', stroke-dasharray='10')
+          li#seconds
+            .number 00
+            .label Seconds
+            svg.pie-plate(width='100', height='100')
+              circle.pie(r='50', cx='50', cy='50')
+
       p.page-note 
         | Pre-registration opens soon!
         br 
         | Interested in presenting? 
         a(href='button btn') Submit a Talk
-    .right-half
+      p.presented-by 
+        | Presented by
+        img(src='/img/kotesol-logo.png')
   section.page-section.whatis
 
   section.page-section.keypts
