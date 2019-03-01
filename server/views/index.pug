@@ -4,7 +4,6 @@ block hero
   //- include partials/hero
   figure.hero
     img(src='/design/web/kotesol-natcon-2019-cloud-wide.jpg')
-  include partials/whatis
 
 block content
   section.site-header
@@ -56,11 +55,13 @@ block content
       p.presented-by 
         | Presented by
         img(src='/img/kotesol-logo.png')
-  section.page-section.whatis
+  include partials/whatis
 
   section.page-section.keypts
-    h1 KeyPts
     include partials/keypts
+
+  section.pages-section.plenary
+    include partials/plenary
 
   section.page-section.speakers
     include partials/speaker-grid 
