@@ -874,6 +874,10 @@ li {
     margin: 0 auto;
 }
 
+.conference-info p {
+  opacity: 1;
+}
+
 .conference-title {
   /* max-width: 900px; */
   margin: 0 auto;
@@ -925,13 +929,14 @@ a:hover {
 # Layout (Content)
 --------------------------------------------------------------*/
 body {
-    background: white;
+  background: #161637;
+  color: white;
 }
 
 .parallax {
   /* background-image: url('../img/bg/2018-conf-white.jpg'); */
-  background-image: url('../design/web/kotesol-natcon-2019-wide-logo-right.jpg');
-  height: 100vh;
+  background-image: url('../design/web/kotesol-natcon-2019-sky-only.jpg');
+  /* height: 100vh; */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -1418,7 +1423,7 @@ a.ticket-button {
   /* overflow-x: hidden; */
 }
 
-.speakers:after {
+/* .speakers:after {
   content: '';
   position: absolute;
   width: 80px;
@@ -1429,7 +1434,7 @@ a.ticket-button {
   right: 0px;
   bottom: -80px;
   z-index: 10;
-}
+} */
 
 .speaker-meta-box {
   position: absolute;
@@ -1595,9 +1600,9 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  width: 100vw;
+  /* width: 100vw;
   min-height: 60vh;
-  height: auto;
+  height: auto; */
 }
 
 .schedule:before {
@@ -1609,7 +1614,7 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 /*   background: rgba(0,0,0,0.2); */
 }
 
-.schedule:after,
+/* .schedule:after,
 .speaker-single:after {
   content: '';
   position: absolute;
@@ -1621,7 +1626,7 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   left: 0px;
   bottom: -80px;
   z-index: 10;
-}
+} */
 
 .schedule.no-bg {
   background: transparent;
