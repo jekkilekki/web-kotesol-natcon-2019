@@ -1298,6 +1298,7 @@ a.ticket-button {
   background: #371e83;
   padding: 10rem 0 0;
   color: white;
+  margin-top: -5px;
   /* position: absolute; */
   /* bottom: 0; */
 }
@@ -1594,6 +1595,11 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   top: -5px;
 }
 
+ /**
+  * -----------------------------------------------------------------------------
+  * Schedule Page
+  * -----------------------------------------------------------------------------
+  */
 .schedule {
   background: url("../design/web/kotesol-natcon-2019-sky-only.jpg");
   background-size: cover;
@@ -1639,7 +1645,7 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 
 .schedule .info {
   text-align: center;
-  color: #004369;
+  color: white;
   margin-top: -2rem;
   /* font-style: italic; */
   font-size: 0.9rem;
@@ -1689,7 +1695,7 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 .schedule-time,
 .schedule-section th {
   padding: 0.5rem;
-  background: rgba(0,0,0,0.9);
+  background: rgba(22, 22, 55 ,0.9);
   color: white;
   text-transform: uppercase;
   font-weight: 500;
@@ -1700,13 +1706,20 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 
 .schedule-session, /* Red */
 .schedule-speaker,
-.schedule-venue {
+.schedule-venue,
+.schedule-track {
   padding: 0.5rem;
   background: #f44336;
   background: hsla(357, 100, 55, 0.8);
   background: rgba(255,25,38, 0.8);
+  background: rgba(213, 22, 76, 0.8); /* Pink-dark #ec174f */
   color: white;
   font-size: 0.8rem;
+}
+
+.speaker-track,
+.speaker-venue {
+  text-align: center;
 }
 
 @media screen and (min-width: 26rem) {
@@ -1716,13 +1729,14 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 
   .schedule-time,
   .schedule-section th {
-    min-width: 60px;
-    font-size: 0.9rem;
+    /* min-width: 60px;
+    font-size: 0.9rem; */
   }
 
   .schedule-session, /* Red */
   .schedule-speaker,
-  .schedule-venue {
+  .schedule-venue,
+  .schedule-track {
     font-size: 0.9rem;
   }
 }
@@ -1730,7 +1744,7 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 @media screen and (min-width: 36rem) {
   .schedule-time,
   .schedule-section th {
-    min-width: 80px;
+    /* min-width: 80px; */
   }
 }
 
@@ -1738,15 +1752,22 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   .schedule-section th,
   .schedule-session,
   .schedule-speaker,
-  .schedule-venue {
-    padding: 1rem;
+  .schedule-venue,
+  .schedule-track {
+    padding: 0.75rem 1rem;
   }
+}
+
+.schedule-track {
+  font-family: "Open Sans Condensed";
+  font-weight: bold!important;
+  background: rgba(100, 44, 132, 0.8);
 }
 
 .schedule-speaker { /* Orange */
   background: #00f2e6;
   background: hsla(48, 100, 50, 0.8);
-  background: rgba(255, 204, 0, 0.8);
+  background: rgba(255, 172, 50, 0.8);
   color: black;
 }
 
@@ -1755,6 +1776,7 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   background: hlsa(202, 100, 21, 0.8);
   background: rgba(0, 67, 105, 0.8);
   font-weight: bold;
+  text-align: center;
 }
 
 .schedule-span {
@@ -1764,11 +1786,90 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   color: black;
   text-align: center;
   text-transform: uppercase;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: bold!important;
 }
 
 .schedule-span span {
   text-transform: lowercase;
   font-size: 0.8rem;
+  font-family: Nunito, sans-serif;
+  font-weight: 300;
+}
+
+.main-event .schedule-session,
+.main-event .schedule-venue,
+.main-event .schedule-speaker,
+.main-event .schedule-track {
+  background: rgba(240, 185, 92, 0.8);
+  background: rgba(252, 203, 179, 0.8); /* Poster orange */
+  background: rgba(255, 186, 157, 0.8); /* More orange */
+  color: #161637;
+}
+
+.room1 .schedule-session:before,
+.room2 .schedule-session:before,
+.room3 .schedule-session:before,
+.room4 .schedule-session:before,
+.room5 .schedule-session:before,
+.room6 .schedule-session:before {
+  font-size: 80%;
+  content: "Content";
+  background: #00f2e6;
+  color: #161637;
+  padding: 2px 6px;
+  position: absolute;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px #201b48;
+  display: none;
+}
+
+.room1 .schedule-session:before {
+  content: "Pedagogy";
+  background: #00f2e6;
+}
+.room2 .schedule-session:before {
+  content: "Motivation";
+  background: #00b9f1;
+}
+.room3 .schedule-session:before {
+  content: "Young Learners";
+  background: #ed0972;
+}
+.room4 .schedule-session:before {
+  content: "Technology";
+  background: #d63aff;
+}
+.room5 .schedule-session:before {
+  content: "Research";
+  background: #6600ff;
+}
+.room6 .schedule-session:before {
+  content: "Other";
+  background: #00f2e6;
+}
+
+#schedule .conference-schedule .page-section-title {
+  padding-top: 2rem;
+}
+
+#schedule .conference-schedule {
+  padding-bottom: 2rem;
+}
+
+#schedule .grid {
+  padding: 0;
+}
+
+#schedule .page-button-container {
+  padding-bottom: 6rem;
+}
+
+#schedule td a,
+.schedule-session a {
+  color: white;
+  /* padding-left: 65px; */
+  display: inline-block;
 }
 
 .buzz {
@@ -3202,36 +3303,6 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
    /* margin-left: 36.375%; */
    /* margin-top: -18.875%; */
  }
-
- /**
-  * -----------------------------------------------------------------------------
-  * Schedule Page
-  * -----------------------------------------------------------------------------
-  */
-#schedule .conference-schedule .page-section-title {
-  padding-top: 2rem;
-}
-
-#schedule .conference-schedule {
-  padding-bottom: 2rem;
-}
-
-#schedule .grid {
-  padding: 0;
-}
-
-#schedule .page-button-container {
-  padding-bottom: 6rem;
-}
-
-#schedule td a,
-.schedule-session a {
-  color: white;
-}
-
-/* #speaker-single .grid {
-  padding: 0 6rem 6rem;
-} */
 
 /**
  * -----------------------------------------------------------------------------
