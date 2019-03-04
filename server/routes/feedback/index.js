@@ -1,15 +1,45 @@
 const express = require( 'express' );
 const router = express.Router();
 
-module.exports = () => {
-  router.get( '/', (req, res, next ) => {
-    return res.render( 'feedback', {
-      page: 'Feedback'
-    });
+module.exports = (param) => {
+
+  const { feedbackService } = param;
+
+  router.get( '/', async (req, res, next) => {
+    try {
+      const feedbacklist = await feedbackService.getAllFeedback();
+      return res.render( 'feedback', {
+        page: 'Leave Your Feedback',
+        feedbacklist,
+        success: req.query.success
+      });
+    } catch(err) {
+      return next(err);
+    }
   });
 
-  router.post( '/', (req, res, next ) => {
-    return res.send(`Feedback submitted`);
+  router.post( '/', async (req, res, next) => {
+    try {
+      const fbName = req.body.fbName.trim();
+      const fbTitle = req.body.fbTitle.trim();
+      const fbMsg = req.body.fbMsg.trim();
+      const feedbacklist = await feedbackService.getAllFeedback();
+
+      if( !fbName || !fbTitle || !fbMsg ) {
+        return res.render( 'feedback', {
+          page: 'Leave Your Feedback',
+          error: true,
+          fbName,
+          fbTitle,
+          fbMsg,
+          feedbacklist
+        });
+      }
+      await feedbackService.addFeedback(fbName, fbTitle, fbMsg);
+      return res.redirect('/feedback?success=true');
+    } catch(err) {
+      return next(err);
+    }
   });
 
   return router;

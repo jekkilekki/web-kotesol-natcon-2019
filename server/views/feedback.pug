@@ -1,35 +1,52 @@
 //- Page: Feedback
 extends layout/index
 block content
-  section.page-section.feedback.red-dot
-  .container.small
-    aside.recent-feedback
-      h2.section-title Recent Feedback
-      ul.feedback-messages
-    form.feedback-form
-      h4.feedback-form-title Leave your feedback
-      .form-group
-        label(for='feedback-form-name') Name
-        input#feedback-form-name.form-control(type='text', placeholder='Enter your name')
-      .form-group
-        label(for='feedback-form-title') Title
-        input#feedback-form-title.form-control(type='text', placeholder='Title of your feedback')
-      .form-group
-        label(for='feedback-form-message') Message
-        textarea#feedback-form-message.form-control(type='text', placeholder='Enter your message', rows='6')
-      input#feedback-form-type(type='hidden')
-      button#negative-feedback.button.negative-feedback.button-inverse.pull-right.form-submit(type='submit')
-        i.fa.fa-thumbs-down
-        span.screen-reader-text Negative Feedback
-      small
-        | The Negative Feedback button will open your email application and allow you to compose a message.
-      a.button.negative-feedback.button-inverse.form-submit(href='mailto:jnjconference@gmail.com')
-        i.fa.fa-thumbs-down
-        span.screen-reader-text Negative Feedback
-      button#positive-feedback.button.positive-feedback.form-submit(type='submit')
-        i.fa.fa-thumbs-up
-        span.screen-reader-text Positive Feedback
-      small
-        | Problems? Send an 
-        a(href='mailto:jnjconference@gmail.com') Email
-  // container
+  section.page-section.feedback
+    .container.small
+      aside.recent-feedback
+        h2.section-title Recent Feedback
+        if !feedbacklist || !feedbacklist.length
+          | No feedback yet. Leave the first comment!
+        else
+          ul.feedback-messages
+            each item in feedbacklist 
+              li.feedback-item 
+                .feedback-info 
+                  .feedback-head 
+                    .feedback-title=item.title
+                      small.feedback-name.label=item.name
+                  .feedback-message=item.message
+
+      form.feedback-form(action='/feedback', method='POST')
+        h4.feedback-form-title Leave your feedback
+        if error 
+          .alert.alert-danger
+            | Error processing form. Please fill out all fields.
+        else if success 
+          .alert.alert-success 
+            | Thank you for your feedback!
+        .form-group
+          label(for='feedback-form-name') Name
+          input#feedback-form-name.form-control(type='text', placeholder='Enter your name', name='fbName', value=fbName)
+        .form-group
+          label(for='feedback-form-title') Title
+          input#feedback-form-title.form-control(type='text', placeholder='Title of your feedback', name='fbTitle', value=fbTitle)
+        .form-group
+          label(for='feedback-form-message') Message
+          textarea#feedback-form-message.form-control(type='text', placeholder='Enter your message', rows='6', name='fbMsg' )=fbMsg
+        input#feedback-form-type(type='hidden')
+        button#negative-feedback.button.negative-feedback.button-inverse.pull-right.form-submit(type='submit')
+          i.fa.fa-thumbs-down
+          span.screen-reader-text Negative Feedback
+        small
+          | The Negative Feedback button will open your email application and allow you to compose a message.
+        a.button.negative-feedback.button-inverse.form-submit(href='mailto:jnjconference@gmail.com')
+          i.fa.fa-thumbs-down
+          span.screen-reader-text Negative Feedback
+        button#positive-feedback.button.positive-feedback.form-submit(type='submit')
+          i.fa.fa-thumbs-up
+          span.screen-reader-text Positive Feedback
+        small
+          | Problems? Send an 
+          a(href='mailto:jnjconference@gmail.com') Email
+    // container

@@ -3,12 +3,16 @@ const reload = require( 'reload' );
 
 const createError = require( 'http-errors' );
 const path = require( 'path' ); // from Node.js
-const configs = require( './config' )
-const SpeakerService = require( './services/SpeakerService' )
+const bodyParser = require( 'body-parser' );
+
+const configs = require( './config' );
+const SpeakerService = require( './services/SpeakerService' );
+const FeedbackService = require( './services/FeedbackService' );
 const app = express();
 
 const config = configs[app.get('env')];
 const speakerService = new SpeakerService(config.data.speakers);
+const feedbackService = new FeedbackService(config.data.feedback);
 
 app.set( 'port', process.env.PORT || 3000 );
 
@@ -33,6 +37,7 @@ app.get( '/favicon.ico', (req, res, next) => {
 });
 
 // Call this Middleware after static so it doesn't run for each static file like CSS
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(async(req, res, next) => {
   try {
     const names = await speakerService.getSpeakersNames();
@@ -50,7 +55,10 @@ app.use(async(req, res, next) => {
 
 // Setup Routes
 const routes = require( './routes' );
-app.use( '/', routes({speakerService}) );
+app.use( '/', routes({
+  speakerService,
+  feedbackService
+}) );
 app.use(( req, res, next ) => {
   return next( createError( 404, 'File not found' ) );
 });
