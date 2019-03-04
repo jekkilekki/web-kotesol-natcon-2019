@@ -14,13 +14,66 @@ class SpeakerService {
     this.datafile = datafile;
   }
 
-  async getNames() {
+  /* Retrieves Names and Shortnames of Speakers only */
+  async getSpeakersNames() {
     const data = await this.getData();
     return data.map((speaker) => {
       return { name: speaker.name, shortname: speaker.shortname };
     });
   }
 
+  async getSpeakersShortList() {
+    const data = await this.getData();
+    return data.map((speaker) => {
+      return {
+        name: speaker.name,
+        shortname: speaker.shortname,
+        affiliation: speaker.affiliation,
+        img: speaker.img,
+        title: speaker.title
+      };
+    });
+  }
+
+  async getSpeakersFullList() {
+    const data = await this.getData();
+    return data.map((speaker) => {
+      return {
+        name: speaker.name,
+        shortname: speaker.shortname,
+        affiliation: speaker.affiliation,
+        img: speaker.img,
+        title: speaker.title
+      };
+    });
+  }
+
+  async getSpeakerDetails(shortname) {
+    const data = await this.getData();
+    const speaker = data.find((speaker) => {
+      return speaker.shortname === shortname;
+    })
+    if( ! speaker ) return null;
+    return {
+      title: speaker.title,
+      name: speaker.name,
+      nickname: speaker.nickname,
+      shortname: speaker.shortname,
+      affiliation: speaker.affiliation,
+      other: speaker.other,
+      time: speaker.time,
+      room: speaker.room,
+      summary: speaker.summary,
+      abstract: speaker.abstract,
+      bio: speaker.bio,
+      img: speaker.img,
+      media: speaker.media,
+      email: speaker.email,
+      phone: speaker.phone
+    }
+  }
+
+  /* Retrieves ALL Speaker data */
   async getData() {
     // Async - Await function to read in the file
     const data = await readFile(this.datafile, 'utf8');

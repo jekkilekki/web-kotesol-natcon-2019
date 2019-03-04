@@ -11,22 +11,37 @@ const teamRoute = require( './team' );
 const conductRoute = require( './conduct' );
 const chatRoute = require( './chat' );
 
-module.exports = () => {
-  router.get( '/', (req, res, next ) => {
-    return res.render('index', {
-      page: 'Home'
-    });
+module.exports = (param) => {
+
+  const { speakerService } = param;
+
+  router.get( '/', async (req, res, next ) => {
+    try {
+      const promises = [];
+      promises.push(speakerService.getSpeakersShortList());
+      promises.push(speakerService.getSpeakersFullList());
+
+      const results = await Promise.all(promises);
+
+      return res.render('index', {
+        page: 'Home',
+        speakerslist: results[0],
+        speakersfull: results[1]
+      });
+    } catch(err) {
+      return next(err);
+    }
   });
 
-  router.use( '/speakers', speakersRoute() );
-  router.use( '/schedule', scheduleRoute() );
-  router.use( '/location', locationRoute() );
-  router.use( '/sponsors', sponsorsRoute() );
-  router.use( '/feedback', feedbackRoute() );
-  router.use( '/tickets', ticketsRoute() );
-  router.use( '/team', teamRoute() );
-  router.use( '/code-of-conduct', conductRoute() );
-  router.use( '/chat', chatRoute() );
+  router.use( '/speakers', speakersRoute(param) );
+  router.use( '/schedule', scheduleRoute(param) );
+  router.use( '/location', locationRoute(param) );
+  router.use( '/sponsors', sponsorsRoute(param) );
+  router.use( '/feedback', feedbackRoute(param) );
+  router.use( '/tickets', ticketsRoute(param) );
+  router.use( '/team', teamRoute(param) );
+  router.use( '/code-of-conduct', conductRoute(param) );
+  router.use( '/chat', chatRoute(param) );
 
   return router;
 }

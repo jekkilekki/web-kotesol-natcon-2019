@@ -35,9 +35,13 @@ app.get( '/favicon.ico', (req, res, next) => {
 // Call this Middleware after static so it doesn't run for each static file like CSS
 app.use(async(req, res, next) => {
   try {
-    const names = await speakerService.getNames();
-    console.log(names);
+    const names = await speakerService.getSpeakersNames();
+    // console.log(names);
     res.locals.speakerNames = names;
+
+    const speakers = await speakerService.getSpeakersFullList();
+    res.locals.speakers = speakers;
+
     return next();
   } catch(err) {
     return next(err);
@@ -46,7 +50,7 @@ app.use(async(req, res, next) => {
 
 // Setup Routes
 const routes = require( './routes' );
-app.use( '/', routes() );
+app.use( '/', routes({speakerService}) );
 app.use(( req, res, next ) => {
   return next( createError( 404, 'File not found' ) );
 });

@@ -1456,7 +1456,7 @@ a.ticket-button {
   max-width: 100%;
   /* margin: auto; */
 /*   color: white; */
-    visibility: hidden;
+    /* visibility: hidden; */
 }
 
 .grid-item:hover .speaker-meta {
