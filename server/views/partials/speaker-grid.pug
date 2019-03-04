@@ -1,46 +1,49 @@
-.container
-  h2.section-title Meet our Speakers
-  // http://davist11.github.io/css-diamond-grid/#
-  .grid
-    .grid-item.grid-title
-      .grid-inner
-        a(href='/speakers') Speakers
-    each speaker in speakers
-      // <article class="speaker">
-      .grid-item.photo
-        .grid-inner(style=`background-image: url('/img/people/${speaker.img}')`)
-          .attendee-img-shadow
-          .attendee-img-shadow-yellow
-          .speaker-meta-box
-            .speaker-meta.grid-layout
-              a(href=`/speakers/${speaker.shortname}`)
-                p.speaker-name=speaker.name
-              p.speaker-affiliation=speaker.affiliation
-              p.speaker-details=speaker.details
+//- .container
+h2.section-title Speakers
+// http://davist11.github.io/css-diamond-grid/#
+ul.grid
+  //- .grid-item.grid-title
+  //-   .grid-inner
+  //-     a(href='/speakers') Speakers
+  each speaker in speakers
+    unless speaker.id == 'plenary'
+    // <article class="speaker">
+    li.grid-item.photo
+      .grid-inner(style=`background-image: url('/img/people/${speaker.img}')`)
+        //- .attendee-img-shadow
+        //- .attendee-img-shadow-yellow
+        .speaker-meta-box
+          .speaker-meta.grid-layout
+            a(href=`/speakers/${speaker.shortname}`)
+              p.speaker-name=speaker.name
+            p.speaker-affiliation
+              !=speaker.affiliation
+            p.speaker-details
+              !=speaker.details 
 
-      .speaker-info-section
-        article.speaker
-          .speaker-info-section
-            .speaker-meta
-              p.speaker-name
-                a(href=`/speakers/${speaker.shortname}`) #
-              p.speaker-affiliation=speaker.affiliation
-              p.speaker-session
-                strong Talk / 
-                a(href=`/speakers/${speaker.shortname}`) #
-              p.speaker-abstract=speaker.abstract
-        // </article>
-        .speaker-info
-          p.speaker-abstract=speaker.abstract
-          h2.speaker-bio-title About #{speaker.name}
-          p.speaker-bio=speaker.bio
-    // .speaker-details
-    .speaker-grid-last
-      .testimonial
-        blockquote
-          | KOTESOL organizes fantastic, inspiring conferences.
-          cite
-            | Angela
-            span KOTESOL member since 2018
-  .page-button-container
-    a.page-button.button(href='/speakers') View All Speaker Details &#x1F449;
+  //-   .speaker-info-section
+  //-     article.speaker
+  //-       .speaker-info-section
+  //-         .speaker-meta
+  //-           p.speaker-name
+  //-             a(href=`/speakers/${speaker.shortname}`) #
+  //-           p.speaker-affiliation=speaker.affiliation
+  //-           p.speaker-session
+  //-             strong Talk / 
+  //-             a(href=`/speakers/${speaker.shortname}`) #
+  //-           p.speaker-abstract=speaker.abstract
+  //-     // </article>
+  //-     .speaker-info
+  //-       p.speaker-abstract=speaker.abstract
+  //-       h2.speaker-bio-title About #{speaker.name}
+  //-       p.speaker-bio=speaker.bio
+  //- // .speaker-details
+  //- .speaker-grid-last
+  //-   .testimonial
+  //-     blockquote
+  //-       | KOTESOL organizes fantastic, inspiring conferences.
+  //-       cite
+  //-         | Angela
+  //-         span KOTESOL member since 2018
+.page-button-container
+  a.page-button.button(href='/speakers') View All Speaker Details &#x1F449;

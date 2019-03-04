@@ -28,9 +28,11 @@ class SpeakerService {
       return {
         name: speaker.name,
         shortname: speaker.shortname,
+        nickname: speaker.nickname,
         affiliation: speaker.affiliation,
         img: speaker.img,
-        title: speaker.title
+        title: speaker.title,
+        summary: speaker.summary
       };
     });
   }
@@ -39,11 +41,23 @@ class SpeakerService {
     const data = await this.getData();
     return data.map((speaker) => {
       return {
+        id: speaker.id,
         name: speaker.name,
         shortname: speaker.shortname,
+        nickname: speaker.nickname,
         affiliation: speaker.affiliation,
+        other: speaker.other,
         img: speaker.img,
-        title: speaker.title
+        time: speaker.time,
+        room: speaker.room,
+        title: speaker.title,
+        summary: speaker.summary,
+        abstract: speaker.abstract,
+        bio: speaker.bio,
+        media: speaker.media,
+        website: speaker.website,
+        email: speaker.email,
+        phone: speaker.phone
       };
     });
   }

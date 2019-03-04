@@ -1424,6 +1424,16 @@ a.ticket-button {
   /* overflow-x: hidden; */
 }
 
+.with-call .speakers {
+  padding-bottom: 12rem;
+}
+
+.speakers .grid {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  padding: 1rem;
+  justify-content: center;
+}
+
 /* .speakers:after {
   content: '';
   position: absolute;
@@ -1595,11 +1605,15 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   top: -5px;
 }
 
- /**
-  * -----------------------------------------------------------------------------
-  * Schedule Page
-  * -----------------------------------------------------------------------------
-  */
+/**
+ * -----------------------------------------------------------------------------
+ * Schedule Page
+ * -----------------------------------------------------------------------------
+ */
+.with-call .schedule {
+  transform: translateY(-110px);
+}
+
 .schedule {
   background: url("../design/web/kotesol-natcon-2019-sky-only.jpg");
   background-size: cover;
