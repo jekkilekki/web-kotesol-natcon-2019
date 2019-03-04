@@ -3,7 +3,9 @@ const router = express.Router();
 
 module.exports = () => {
   router.get( '/', (req, res, next ) => {
-    return res.render( 'location' );
+    return res.render( 'location', {
+      page: 'Location'
+    });
   });
 
   return router;

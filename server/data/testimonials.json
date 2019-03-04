@@ -1,0 +1,352 @@
+{
+  "testimonials": [
+    {
+      "id": "a",
+      "member": "Dr. William Littlewood",
+      "since": "KOTESOL Patron",
+      "comment": "For several years, KOTESOL conferences have been my favorite events for meeting constructive and stimulating ideas in the company of supportive, welcoming colleagues. Thanks to everyone involved!"
+    },
+    {
+      "id": "b",
+      "member": "Dr. Curtis Hart Kelly, Japan",
+      "since": "KOTESOL Patron",
+      "comment": "KOTESOL is an ocean away, but like a second home."
+    },
+    {
+      "id": 1,
+      "member": "Seongsuk Yun",
+      "since": 2014,
+      "comment": "Through KOTESOL, I have been able to meet very passionate, dedicated educators."
+    },
+    {
+      "id": 2,
+      "member": "Kara Waggoner",
+      "since": 2015,
+      "comment": "KOTESOL has helped me grow professionally through their engaging workshops and conferences."
+    },
+    {
+      "id": 3,
+      "member": "Jared Dela Paz",
+      "since": 2013,
+      "comment": "KOTESOL has helped me widen my professional network and gain current insights into the ELT community."
+    },
+    {
+      "id": 4,
+      "member": "Luis R. Caballero",
+      "since": 2018,
+      "comment": "KOTESOL conferences are the greatest professional development opportunity for teachers in Korea."
+    },
+    {
+      "id": 5,
+      "member": "Dilnoza Aliakhunova",
+      "since": 2017,
+      "comment": "KOTESOL assists me in garnering valuable and enjoyable teaching experiences to implement in my own lessons."
+    },
+    {
+      "id": 6,
+      "member": "Kristy Dolson",
+      "since": 2014,
+      "comment": "Through KOTESOL, I have expanded my teaching repertoire."
+    },
+    {
+      "id": 8,
+      "member": "Mikyoung Lee",
+      "since": 2015,
+      "comment": "KOTESOL has provided me with the opportunity to improve my research skills."
+    },
+    {
+      "id": 9,
+      "member": "Jennifer Lee",
+      "since": 2014,
+      "comment": "KOTESOL helped connect me with industry leaders and professionals, opening up opportunities for me."
+    },
+    {
+      "id": 10,
+      "member": "Jennifer Lee",
+      "since": 2014,
+      "comment": "KOTESOL helped me stay updated on the latest innovations in teaching and gave me ideas for my own lessons."
+    },
+    {
+      "id": 12,
+      "member": "Sunette Labuschagne",
+      "since": 2012,
+      "comment": "Meeting other educators and sharing ideas encourages me to always do my best."
+    },
+    {
+      "id": 13,
+      "member": "Sunette Labuschagne",
+      "since": 2012,
+      "comment": "KOTESOL encouraged me to start presenting at workshops and teachers' training courses."
+    },
+    {
+      "id": 14,
+      "member": "Angela",
+      "since": 2018,
+      "comment": "KOTESOL helps me get new ideas for my lesson planning and teaching."
+    },
+    {
+      "id": 15,
+      "member": "Angela",
+      "since": 2018,
+      "comment": "KOTESOL helps me share teaching experiences and ideas, and allows me to get feedback."
+    },
+    {
+      "id": 16,
+      "member": "Angela",
+      "since": 2018,
+      "comment": "KOTESOL is the only teaching community accessible not only online but actually in my city."
+    },
+    {
+      "id": 19,
+      "member": "Angela",
+      "since": 2018,
+      "comment": "KOTESOL membership provides access to useful publications and to getting published."
+    },
+    {
+      "id": 21,
+      "member": "Angela",
+      "since": 2018,
+      "comment": "KOTESOL organizes fantastic, inspiring conferences."
+    },
+    {
+      "id": 28,
+      "member": "Jeongsoon Park",
+      "since": 2013,
+      "comment": "Through KOTESOL, I have grown in experience in the four skills, especially speaking, and have gained self-confidence as an English expert."
+    },
+    {
+      "id": 29,
+      "member": "James G. Rush II",
+      "since": 2017,
+      "comment": "Through KOTESOL, I have been told and shown that 'we won't let you fail'."
+    },
+    {
+      "id": 30,
+      "member": "James G. Rush II",
+      "since": 2017,
+      "comment": "Through KOTESOL, I have learned more about myself, Korea, and how to be a better educator."
+    },
+    {
+      "id": 32,
+      "member": "Jeroen Root",
+      "since": 2013,
+      "comment": "I always leave KOTESOL workshops with fresh ideas and renewed motivation for the classroom."
+    },
+    {
+      "id": 33,
+      "member": "Lisa Casaus",
+      "since": 2016,
+      "comment": "KOTESOL is just what I needed when I came to Korea: community."
+    },
+    {
+      "id": 34,
+      "member": "JuSeong Lee",
+      "since": 2013,
+      "comment": "KOTESOL has been the continuous source of professional development for my teaching and research."
+    },
+    {
+      "id": 35,
+      "member": "Greg Brooks-English",
+      "since": 2008,
+      "comment": "Korea TESOL helped me professionally network to get an amazing job."
+    },
+    {
+      "id": 36,
+      "member": "Zon Petilla",
+      "since": 2015,
+      "comment": "KOTESOL's a great support group for rookie and seasoned teachers to gain new ideas."
+    },
+    {
+      "id": 37,
+      "member": "Christopher Miller",
+      "since": 2011,
+      "comment": "The community that KOTESOL provides motivates me to continually improve as a teacher."
+    },
+    {
+      "id": 39,
+      "member": "Andrew Griffiths",
+      "since": 2013,
+      "comment": "KOTESOL makes me a better teacher: more reflective, more receptive, more open-minded."
+    },
+    {
+      "id": 40,
+      "member": "Matkhiya Usmonova",
+      "since": 2017,
+      "comment": "KOTESOL is an active professional community that helps its members to exchange ideas and keep abreast of research in the field."
+    },
+    {
+      "id": 41,
+      "member": "Dr. Yeon-seong Park",
+      "since": 1999,
+      "comment": "Through KOTESOL, I have been able to connect with lots of English speakers who are dedicated ELT professionals."
+    },
+    {
+      "id": 42,
+      "member": "Bryan Hale",
+      "since": 2012,
+      "comment": "Through KOTESOL, I have been able to take responsibility for my own development as a teacher."
+    },
+    {
+      "id": 43,
+      "member": "Daniel Wolkenfeld",
+      "since": 2013,
+      "comment": "KOTESOL: Kind, Open Teachers who are Excited to Share Opinions and Lessons."
+    },
+    {
+      "id": 44,
+      "member": "Lisa Casaus",
+      "since": 2016,
+      "comment": "The support I've felt at KOTESOL is just as valuable as the information I've received."
+    },
+    {
+      "id": 45,
+      "member": "Eric Cebreiro",
+      "since": 2018,
+      "comment": "KOTESOL has provided a place where we can learn from each other."
+    },
+    {
+      "id": 48,
+      "member": "Eric Cebreiro",
+      "since": 2018,
+      "comment": "KOTESOL conferences help me to reflect on my own teaching techniques."
+    },
+    {
+      "id": 51,
+      "member": "Lisa Casaus",
+      "since": 2016,
+      "comment": "KOTESOL is helping me to keep learning for my students."
+    },
+    {
+      "id": 52,
+      "member": "Kathleen Kelley",
+      "since": 2013,
+      "comment": "KOTESOL has allowed me to develop leadership skills outside of the classroom."
+    },
+    {
+      "id": 53,
+      "member": "Amanda Maitland",
+      "since": 2009,
+      "comment": "Being with KOTESOL means that I keep growing intellectually, socially, and pedagogically."
+    },
+    {
+      "id": 54,
+      "member": "Amanda Maitland",
+      "since": 2009,
+      "comment": "With KOTESOL, I've been able to challenge my creativity to develop new teaching techniques."
+    },
+    {
+      "id": 55,
+      "member": "Ji-Myoung Park",
+      "since": 2006,
+      "comment": "Through KOTESOL I have made new friends, traveled the country, and challenged my career aspirations."
+    },
+    {
+      "id": 56,
+      "member": "Eva A. Combs",
+      "since": 2017,
+      "comment": "More than excellent professional development, KOTESOL has provided me with a community in Korea."
+    },
+    {
+      "id": 57,
+      "member": "Susan Kang",
+      "since": 2016,
+      "comment": "KOTESOL has connected me to my best friend, KS. Thank you!"
+    },
+    {
+      "id": 58,
+      "member": "Susan Kang",
+      "since": 2016,
+      "comment": "The 2016 KOTESOL National Conference in Wonju has really changed my life!"
+    },
+    {
+      "id": 60,
+      "member": "Dr. Kara Mac Donald",
+      "since": 2006,
+      "comment": "KOTESOL offers members the opportunity to be part of a true community of practice both locally and internationally with other affiliates."
+    },
+    {
+      "id": 61,
+      "member": "Ris Lee",
+      "since": 2016,
+      "comment": "KOTESOL has opened up a whole new world to me that helps me see a different perspective in teaching."
+    },
+    {
+      "id": 62,
+      "member": "Sang-Ho Han, PhD",
+      "since": "National President, 1999-2000",
+      "comment": "KOTESOL has served me as a springboard for creative teaching ideas and as a nurturer of self-directed research as well as a facilitator for development in educational leadership."
+    },
+    {
+      "id": 63,
+      "member": "Rhett Burton",
+      "since": 2011,
+      "comment": "KOTESOL - The right place at the right time!"
+    },
+    {
+      "id": 64,
+      "member": "Mitzi Kaufman",
+      "since": 2014,
+      "comment": "The creative ideas I get at KOTESOL events help keep my teaching fresh."
+    },
+    {
+      "id": 65,
+      "member": "Jennifer Booker Smith",
+      "since": "2002-2012",
+      "comment": "Having KOTESOL elected positions on my CV was more valuable than my MEd TESOL."
+    },
+    {
+      "id": 66,
+      "member": "Jennifer Booker Smith",
+      "since": "2002-2012",
+      "comment": "KOTESOL helped me develop continuously as a teacher and provided social and professional networking and fellowship with like-minded peers."
+    },
+    {
+      "id": 67,
+      "member": "Grace Wang",
+      "since": 2006,
+      "comment": "KOTESOL has given me kindred-spirit colleagues, friends, and joy for ELT."
+    },
+    {
+      "id": 68,
+      "member": "Grace Wang",
+      "since": 2006,
+      "comment": "KOTESOL is the best place to meet like-minded ELT professionals in Korea."
+    },
+    {
+      "id": 69,
+      "member": "David Shaffer",
+      "since": 1993,
+      "comment": "KOTESOL is like rice: a staple for sustenance and growth."
+    },
+    {
+      "id": 70,
+      "member": "David Shaffer",
+      "since": 1993,
+      "comment": "KOTESOL has added, in myriad ways, to my life, to me."
+    },
+    {
+      "id": 73,
+      "member": "Jenny Cho",
+      "since": 2018,
+      "comment": "Thanks to KOTESOL, I've been able to grow my expertise and connections in the field of education."
+    },
+    {
+      "id": 74,
+      "member": "Jocelyn Wright",
+      "since": 2007,
+      "comment": "Korea TESOL is constantly growing, morphing - increasingly becoming more professional, more inclusive, more critically reflective - transforming."
+    },
+    {
+      "id": 76,
+      "member": "Lindsay Herron",
+      "since": "President 2015-2017",
+      "comment": "KOTESOL is my community of practice, support group, and family in Korea."
+    },
+    {
+      "id": 78,
+      "member": "Phillip Schrank",
+      "since": 2013,
+      "comment": "KOTESOL is many different things to many different people, making it vital for the English teaching community."
+    }
+  ]
+}

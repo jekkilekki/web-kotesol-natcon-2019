@@ -1,14 +1,16 @@
-var express = require( 'express' );
-var reload = require( 'reload' );
+const express = require( 'express' );
+const reload = require( 'reload' );
 
 const createError = require( 'http-errors' );
 const path = require( 'path' ); // from Node.js
-var app = express();
+const configs = require( './config' )
+const SpeakerService = require( './services/SpeakerService' )
+const app = express();
+
+const config = configs[app.get('env')];
+const speakerService = new SpeakerService(config.data.speakers);
 
 app.set( 'port', process.env.PORT || 3000 );
-
-app.locals.siteTitle = '2019 Korea TESOL National Conference';
-// app.locals.allSpeakers = dataFile.speakers;
 
 // Using Pug to create our Template files now (Express default)
 app.set( 'view engine', 'pug' );
@@ -18,10 +20,29 @@ if ( app.get( 'env' ) === 'development' ) {
 app.set( 'views', path.join( __dirname, './views' ) );
 
 
+app.locals.siteTitle = config.sitename;
+// app.locals.allSpeakers = dataFile.speakers;
+
+app.use((req, res, next) => {
+  res.locals.renderTime = new Date();
+  return next();
+})
 app.use( express.static( 'public' ) );
 app.get( '/favicon.ico', (req, res, next) => {
   return res.sendStatus(204);
 });
+
+// Call this Middleware after static so it doesn't run for each static file like CSS
+app.use(async(req, res, next) => {
+  try {
+    const names = await speakerService.getNames();
+    console.log(names);
+    res.locals.speakerNames = names;
+    return next();
+  } catch(err) {
+    return next(err);
+  }
+})
 
 // Setup Routes
 const routes = require( './routes' );

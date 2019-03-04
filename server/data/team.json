@@ -1,0 +1,36 @@
+{
+  "team": [
+    {
+      "name": "Aaron Snowberger",
+      "title": "President",
+      "email": "aaron.jju@gmail.com",
+      "site": "https://aaron.kr",
+      "bio": "<p>Aaron Snowberger is a Google Certified Trainer, Educator, and G Suite Administrator. He's the Technology instructor at Global Prodigy Academy international high school in Jeonju where he's been instructing students and staff in G Suite since 2013. He holds a bachelor's degree in Computer Science and a master's degree in Graphic/Media Design. Aaron has lived in Jeonju since 2006, and has also taught English at Jeonju University since 2010.</p>",
+      "img": "Aaron_Snowberger.jpg"
+    },
+    {
+      "name": "Suhhee Kang",
+      "title": "Vice President",
+      "email": "",
+      "site": "",
+      "bio": "<p>Suhhee Kang has taught English since 1998. She has taught in several Hagwons including Min Byung Chul, Jung Cheol, Jongno and E.Bo Young's talking club in Seoul and Bundang before moving to Jeonju.</p><p>Suhhee is currently a self employed tutor and enjoys teaching. She is especially happy to see her students improving their language skills. Autonomy is important her classroom, and her expectations are that the students take control of their learning process. She also does her best to promote a comfortable learning environment where her students don't feel afraid of making mistakes.</p>",
+      "img": "Suhhee_Kang.png"
+    },
+    {
+      "name": "Ingrid Zwaal",
+      "title": "Treasurer",
+      "email": "",
+      "site": "",
+      "bio": "<p>Ingrid Zwaal is currently the foreign teacher who has been in Jeonju the longest at 23 years. She works at Jeonju University when not playing volleyball or with her three badly behaving dogs. She writes a weekly news column in a local paper about herself and her adventures.</p>",
+      "img": "Ingrid_Zwaal.png"
+    },
+    {
+      "name": "Allison Bill",
+      "title": "Web Editor",
+      "email": "",
+      "site": "",
+      "bio": "<p>Miriam Lee, while not defending her Noraebang title or re-organizing her NPR mug collection, is most likely singing in the hallway at the Jeonju English Center, where she teaches all the fifth graders of Jeonju to sing the Do Re Mi song. She received her Bachelor of Arts degree from the University of Connecticut (in the United States) in 2003 in Art History and Anthropology, and received third place in a Care Bears coloring contest in Jersey City in 1986.</p>",
+      "img": "Miriam_Lee.png"
+    }
+  ]
+}

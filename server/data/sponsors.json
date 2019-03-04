@@ -1,0 +1,69 @@
+{
+  "sponsors": [
+    {
+      "name": "Jeonju University",
+      "description": "Jeonju University is a private university located on the west end of Jeonju. It has been host to the Jeonju-North Jeolla KOTESOL chapters workshops and Conferences since 2014.",
+      "address": "전라북도 전주시 완산구 천잠로 303",
+      "phone": "1577-7177",
+      "map": "http://naver.me/GueSCeth",
+      "website": "http://www.jj.ac.kr/",
+      "level": "host",
+      "amount": "400,000",
+      "gift": "rooms",
+      "logo": "jju-logo.png",
+      "media": [""]
+    },
+    {
+      "name": "KOTESOL",
+      "description": "KOTESOL is a non-profit, professional organization that seeks to assist teachers in self-development and improve English Language Teaching in Korea.",
+      "address": "",
+      "phone": "",
+      "map": "",
+      "website": "https://koreatesol.org/",
+      "level": "host",
+      "amount": "",
+      "gift": "",
+      "logo": "kotesol-logo.png",
+      "media": [""]
+    },
+    {
+      "name": "TOP English Bookstore",
+      "description": "One of the oldest, largest, and best known English bookstores in Jeonju. Located near Gaeksa.",
+      "address": "전북 전주시 완산구 동문길 110",
+      "phone": "063-285-6888",
+      "map": "http://naver.me/xi0JL0WB",
+      "website": "",
+      "level": "gold",
+      "amount": "300,000",
+      "gift": "donation",
+      "logo": "top-logo.png",
+      "media": [""]
+    },
+    {
+      "name": "Lemon Tree Cafe",
+      "description": "A Korean coffee shop located down on the road between Gaeksa and Hanok Village.",
+      "address": "전북 전주시 완산구 전라감영로 75",
+      "phone": "063-285-0005",
+      "map": "http://naver.me/5bbqCFuG",
+      "website": "",
+      "level": "silver",
+      "amount": "50,000",
+      "gift": "vouchers + donation",
+      "logo": "lemontree-logo.png",
+      "media": [""]
+    },
+    {
+      "name": "English Garden",
+      "description": "A unique Patchwork Studio with bright interior decor, artwork, old Korean sewing machines, and a large collection of (even English) books.",
+      "address": "전주시 완산구 화산천변 3길 4-3",
+      "phone": "010-5008-3963",
+      "map": "http://naver.me/xdodjYGu",
+      "website": "",
+      "level": "bronze",
+      "amount": "50,000",
+      "gift": "donation",
+      "logo": "english-garden-logo.png",
+      "media": [""]
+    }
+  ]
+}

@@ -3,7 +3,9 @@ const router = express.Router();
 
 module.exports = () => {
   router.get( '/', (req, res, next ) => {
-    return res.render( 'sponsors' );
+    return res.render( 'sponsors', {
+      page: 'Sponsors'
+    });
   });
 
   return router;

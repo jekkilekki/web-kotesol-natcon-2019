@@ -13,7 +13,9 @@ const chatRoute = require( './chat' );
 
 module.exports = () => {
   router.get( '/', (req, res, next ) => {
-    return res.render('index');
+    return res.render('index', {
+      page: 'Home'
+    });
   });
 
   router.use( '/speakers', speakersRoute() );
