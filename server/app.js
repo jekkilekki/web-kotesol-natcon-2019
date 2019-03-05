@@ -1,11 +1,12 @@
 const express = require( 'express' );
+const http = require('http');
 const reload = require( 'reload' );
-
-const createError = require( 'http-errors' );
 const path = require( 'path' ); // from Node.js
+const createError = require( 'http-errors' );
 const bodyParser = require( 'body-parser' );
-
+const routes = require( './routes' );
 const configs = require( './config' );
+const db = require('./lib/db');
 const SpeakerService = require( './services/SpeakerService' );
 const FeedbackService = require( './services/FeedbackService' );
 const app = express();
@@ -54,7 +55,6 @@ app.use(async(req, res, next) => {
 })
 
 // Setup Routes
-const routes = require( './routes' );
 app.use( '/', routes({
   speakerService,
   feedbackService
@@ -71,7 +71,27 @@ app.use((err, req, res, next) => {
   return res.render('notfound');
 });
 
-var server = app.listen( app.get( 'port' ), function() {
+const server = http.createServer(app);
+
+// Connect to MongoDB
+db.connect(config.database.dsn)
+  .then(() => {
+    console.log('Connected to MongoDB');
+    server.listen(port);
+  })
+  .catch((err) => {
+    console.error(err);
+  });
+
+server.on('listening', () => {
+  const addr = server.address();
+  const bind = typeof addr === 'string'
+    ? `pipe ${addr}`
+    : `port ${addr.port}`;
+  console.log(`Listening on ${bind}`);
+});
+
+app.listen( app.get( 'port' ), function() {
   console.log( 'Listening on port ' + app.get( 'port' ) ); 
 });
 

@@ -722,7 +722,7 @@ li {
 
 .mobile-menu.active .site-menu a:hover {
 /*   background: #f1f1f1; */
-  font-weight: bold;
+  transform: scale(1.1);
 }
 
 .site-menu {
@@ -1702,6 +1702,12 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   border-spacing: 1px;
 }
 
+.schedule tr:hover, 
+.schedule tr:active,
+.schedule tr:focus {
+  background: rgba(0,0,0,0.7);
+}
+
 .schedule-section td {
   font-weight: 300;
 }
@@ -1729,6 +1735,19 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   background: rgba(213, 22, 76, 0.8); /* Pink-dark #ec174f */
   color: white;
   font-size: 0.8rem;
+  transition: all 0.3s;
+}
+
+.schedule-session a:hover,
+.schedule-session a:focus,
+.schedule-session a:active {
+  text-decoration: underline;
+  /* text-shadow: 2px 2px 6px black; */
+  border: 0;
+}
+
+.schedule-session .fa-external-link-alt {
+  opacity: 0.5;
 }
 
 .speaker-track,
