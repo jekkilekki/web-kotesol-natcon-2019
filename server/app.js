@@ -74,14 +74,27 @@ app.use((err, req, res, next) => {
 const server = http.createServer(app);
 
 // Connect to MongoDB
-db.connect(config.database.dsn)
-  .then(() => {
-    console.log('Connected to MongoDB');
-    server.listen(port);
-  })
-  .catch((err) => {
-    console.error(err);
-  });
+// db.connect(config.database.dsn)
+//   .then(() => {
+//     console.log('Connected to MongoDB');
+//     server.listen(port);
+//   })
+//   .catch((err) => {
+//     console.error(err);
+//   });
+
+const MongoClient = require('mongodb').MongoClient;
+
+const uri = 'mongodb+srv://dbUser:tjtU0TONeanmFoMM@cluster0-9emqk.gcp.mongodb.net/test?retryWrites=true';
+db.connect( uri, function(err, client) {
+  if(err) {
+    console.log('Error occurred while connecting to MongoDB Atlas...\n', err);
+  }
+  console.log('Connected to MongoDB Atlas...\n');
+  const collection = client.db('test').collection('users');
+  //perform actions on the collection object
+  client.close();
+});
 
 server.on('listening', () => {
   const addr = server.address();

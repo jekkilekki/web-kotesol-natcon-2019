@@ -34,6 +34,16 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
  * Schedule design: https://i2.wp.com/www.hpair.org/wp-content/uploads/2017/05/ver-1.61111.jpg
  */
 /*--------------------------------------------------------------
+>>> Responsive Sizes Notes
+--------------------------------------------------------------*/
+/*
+ * Smallest: max-width: 26rem
+ * Small: min-width: 22rem, 25rem, 26rem
+ * Medium: min-width: 30rem, 32rem, 35rem, 36rem
+ * Large: min-width: 46rem, 52rem
+ * Largest: min-width: 60rem, 62rem, 66rem
+ */
+/*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 # Normalize
@@ -479,10 +489,6 @@ li {
   padding-right: 2rem;
 }
 
-.call-to-action p {
-  /* opacity: 0.8; */
-}
-
 .call-title {
   font-size: 1.5rem;
     margin-bottom: 0.25rem;
@@ -542,10 +548,7 @@ li {
 }
 
 @media screen and (max-width: 32rem) {
-  .site-banner {
-    /* height: 85px; */
-    /* display: inline-block; */
-  }
+
 }
 
 .site-banner header {
@@ -595,16 +598,9 @@ li {
     display: none;
   }
 }
- 
-.site-banner img {
-  /* display: inline; */
-}
 
 @media screen and (min-width: 32rem) {
-  .site-banner img {
-    /* display: block; */
-    /* margin-bottom: 5px; */
-  }
+
 }
 
 .site-banner p {
@@ -662,10 +658,6 @@ li {
   flex-wrap: no-wrap;
   justify-content: space-between;
   padding: 1rem 2rem;
-}
-
-.site-menu-bar.smaller {
-  /* display: none; */
 }
 
 .site-menu-bar.smaller .container {
@@ -931,6 +923,8 @@ a:hover {
 body {
   background: #161637;
   color: white;
+  background: transparent;
+  color: #161637;
 }
 
 .parallax {
@@ -1034,10 +1028,7 @@ body {
 }
 
 @media screen and (max-width: 32rem) {
-  .hero {
-    /* height: calc( 100vh - 60px ); */
-    /* top: 80px; */
-  }
+
 }
 
 .hero img {
@@ -1074,19 +1065,6 @@ body {
   display: none;
 }
 
-.page-info:before {
-/*   background: url(https://scontent-icn1-1.xx.fbcdn.net/v/t31.0-8/22770859_1850518865260785_9087332588399720364_o.jpg?oh=b2b6ce3c25d8b70568e1aed68cdf4480&oe=5A744DE9); */
-/*   background-size: cover;
-  width: 100%;
-  height: 100%;
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0; */
-/*   opacity: 0.5; */
-}
-
 .button {
   color: white;
   font-weight: bold;
@@ -1119,10 +1097,6 @@ a.ticket-button {
   padding-top: 0.5rem!important;
   height: 30px;
   margin-top: -0.3rem;
-}
-
-.page-info {
-/*   font-family: 'Roboto Condensed', sans-serif; */
 }
 
 .page-title {
@@ -1195,10 +1169,10 @@ a.ticket-button {
   }
 
   .page-title img {
-    height: 40px;
+    /* height: 40px; */
     display: inline;
     padding-top: 5px;
-    float: left;
+    /* float: left; */
   }
 
   .page-title h1 {
@@ -1482,15 +1456,7 @@ a.ticket-button {
   margin-bottom: 0;
 }
 
-.speaker-affiliation {
-  /* display: none; */
-}
-
 @media screen and (min-width: 36rem) {
-  .speaker-meta .speaker-session {
-    /* max-width: 80%; */
-  }
-
   .speaker-affiliation {
     display: block;
   }
@@ -1531,10 +1497,6 @@ p.speaker-name {
 /*   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 1.25rem; */
-}
-
-.speaker-img-container {
-
 }
 
 /* .speaker-img {
@@ -1760,12 +1722,6 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
     margin: 0 auto 2rem;
   }
 
-  .schedule-time,
-  .schedule-section th {
-    /* min-width: 60px;
-    font-size: 0.9rem; */
-  }
-
   .schedule-session, /* Red */
   .schedule-speaker,
   .schedule-venue,
@@ -1775,10 +1731,7 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 }
 
 @media screen and (min-width: 36rem) {
-  .schedule-time,
-  .schedule-section th {
-    /* min-width: 80px; */
-  }
+  
 }
 
 @media screen and (min-width: 46rem) {
@@ -2321,10 +2274,6 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   filter: grayscale(0%); */
 }
 
-.speaker-single .grid-item.photo {
-  /* margin-top: -3rem; */
-}
-
 .speaker-single .grid-item.photo img {
   opacity: 1;
 }
@@ -2792,21 +2741,15 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 }
 
 @media screen and (min-width: 36rem) {
-  #speakers article.speaker {
-    /* height: 160px; */
-  }
+  
 }
 
 @media screen and (min-width: 46rem) {
-  #speakers article.speaker {
-    /* height: 200px; */
-  }
+  
 }
 
 @media screen and (min-width: 56rem) {
-  #speakers article.speaker {
-    /* height: 260px; */
-  }
+  
 }
 
 #speakers article.speaker .grid-item {
@@ -2817,11 +2760,7 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 }
 
 @media screen and (min-width: 30rem) {
-  #speakers article.speaker .grid-item {
-      /* border: 2px solid #00f2e6;
-      border-image-source: linear-gradient(#00f2e6, #fff);
-      border-image-slice: 30; */
-  }
+  
 }
 
 #speakers .grid {
@@ -2859,9 +2798,7 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 }
 
 @media screen and (min-width: 22rem) {
-  #speakers .speaker-meta {
-    /* padding-left: 100px; */
-  }
+  
 
   #speakers .speaker .photo {
     display: block;
@@ -2869,21 +2806,15 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 }
 
 @media screen and (min-width: 26rem) {
-  #speakers .speaker-meta {
-    /* padding-left: 130px; */
-  }
+  
 }
 
 @media screen and (min-width: 46rem) {
-  #speakers .speaker-meta {
-    /* padding-left: 160px; */
-  }
+  
 }
 
 @media screen and (min-width: 56rem) {
-  #speakers .speaker-meta {
-    /* padding-left: 190px; */
-  }
+  
 }
 
 #speakers .speaker-meta .speaker-name,
@@ -2980,28 +2911,14 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   float: left;
 }
 
-#speaker-single .speaker-info {
-  /* margin-top: -1rem; */
-}
-
 @media screen and (min-width: 36rem) {
   #team .speaker-meta {
     /* margin-top: -100px; */
     float: left;
   }
-
-  #speaker-single .speaker-info {
-    /* margin-top: -4rem; */
-  }
 }
 
 @media screen and (min-width: 46rem) {
-  #speaker-single .speaker-info-section
-  /* #team .speaker-info-section  */
-  {
-    /* padding-left: 280px; */
-  }
-
   #team .speaker-info {
     margin-top: 0;
     float: none;
@@ -3013,27 +2930,15 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 }
 
 @media screen and (min-width: 56rem) {
-  #speaker-single .speaker-info-section
-  /* #team .speaker-info-section  */
-  {
-    /* padding-left: 330px; */
-  }
+
 }
 
 @media screen and (min-width: 66rem) {
-  #speaker-single .speaker-info-section
-  /* #team .speaker-info-section  */
-  {
-    /* padding-left: 380px; */
-  }
+
 }
 
 #speaker-single .grid {
   padding-bottom: 6rem;
-}
-
-#speaker-single .grid-item {
-  /* height: 200px; */
 }
 
 #speaker-single .grid-item.photo,
@@ -3060,10 +2965,7 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 }
 
 @media screen and (min-width: 46rem) {
-  #speaker-single .grid-item.photo,
-  #team .grid-item.photo {
-    /* margin-left: 5.5%; */
-  }
+
 }
 
 #speaker-single .speaker-meta {
@@ -3088,12 +2990,6 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 #speaker-single .speaker-meta .speaker-session {
   font-size: 1.5rem;
 }
-
- #speaker-single .speaker-title {
-   /* padding-left: 250px; */
-   /* margin-top: -5rem; */
-   /* margin-bottom: 3rem; */
- }
 
  #speaker-single .speaker-bio-title,
  .team .speaker-bio-title {
@@ -3152,45 +3048,15 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
      margin: 4rem auto 0;
  }
 
- #speaker-single .speaker-list,
- #schedule .speaker-list {
-   /* padding: 4rem 0; */
- }
-
- #speaker-single .speaker-list .grid,
- #schedule .speaker-list .grid {
-   /* padding: 1rem 0 0rem; */
- }
-
  @media screen and (min-width: 36rem) {
-   #speaker-single .speaker-list .grid {
-     /* padding: 2rem 0 1rem; */
-   }
-
-   #schedule .speaker-list .grid {
-     /* padding: 2rem 2rem 1rem; */
-   }
+   
  }
 
  @media screen and (min-width: 46rem) {
-   #speaker-single .speaker-list .grid {
-     /* padding: 4rem 0 2rem; */
-   }
-
-   #schedule .speaker-list .grid {
-     /* padding: 4rem 4rem 2rem; */
-   }
+   
  }
 
  @media screen and (min-width: 56rem) {
-   #speaker-single .speaker-list .grid {
-     /* padding: 6rem 0 4rem; */
-   }
-
-   #schedule .speaker-list .grid {
-     /* padding: 4rem 6rem 2rem; */
-   }
-
    #schedule .speaker-list .grid-title {
      font-size: 1.5rem;
    }
@@ -3264,12 +3130,6 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
      background: transparent;
  }
 
-#speaker-single .speaker-list .grid-item.grid-title {
-  /* width: 17%; */
-  /* padding-bottom: 17%; */
-  /* font-size: 0.8rem; */
-}
-
 /* #speaker-single .speaker-list .grid-item.grid-title span {
   display: none;
 }
@@ -3314,27 +3174,6 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
  #speaker-single .speaker-list .grid-item:nth-child(3),
  #speaker-single .speaker-list .grid-item:nth-child(4) {
     margin-top: 0%;
- }
-
- #speaker-single .speaker-list .grid-item:nth-child(5n+5)  {
-   /* margin-left: 16.5%; */
-   /* margin-top: -8.25%; */
- }
-
-
-#speaker-single .speaker-list .grid-item:nth-child(5n+6) {
-  /* margin-left: 41.5%; */
-  /* margin-top: -21%; */
-}
-
-#speaker-single .speaker-list .grid-item:nth-child(5n+7) {
-  /* margin-left: 66.5%; */
-  /* margin-top: -21%; */
-}
-
- #speaker-single .speaker-list .grid-item:nth-child(5n+8):last-of-type {
-   /* margin-left: 36.375%; */
-   /* margin-top: -18.875%; */
  }
 
 /**
@@ -3696,9 +3535,7 @@ h2.accomodation {
  }
 
  @media screen and (min-width: 52rem) {
-   .team-grid article {
-     /* padding: 0 4rem; */
-   }
+   
  }
 
  .team-grid .grid-item {
@@ -3758,10 +3595,6 @@ h2.accomodation {
  * Sponsors
  * -----------------------------------------------------------------------------
  */
- .sponsors .page-section-title {
-   /*text-align: center;*/
-   /*padding-bottom: 8rem;*/
- }
 
  /*.sponsor-logo {
    width: 100%;
@@ -3778,9 +3611,7 @@ h2.accomodation {
 }
 
 @media screen and (min-width: 56rem) {
-  .sponsors {
-    /* padding: 3rem 0 6rem; */
-  }
+  
 }
 
 #home .sponsors {
@@ -4071,9 +3902,7 @@ h4.sponsor-section-title {
 }
 
 @media screen and (min-width: 46rem) {
-  .sponsor-list-small .sponsor-list-item .sponsor-logo {
-    /*max-height: 100px;*/
-  }
+  
 }
 
 .sponsor-meta {
@@ -4087,9 +3916,7 @@ h4.sponsor-section-title {
     /*visibility: hidden;*/
 }
 
-.sponsor-list-item:hover .sponsor-meta {
-  /*visibility: visible;*/
-}
+
 
 .sponsor-meta small {
     font-weight: 300;
