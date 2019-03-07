@@ -18,6 +18,7 @@ module.exports = (param) => {
   router.get( '/', async (req, res, next ) => {
     try {
       const promises = [];
+      promises.push(speakerService.getPlenaryDetails());
       promises.push(speakerService.getSpeakersShortList());
       promises.push(speakerService.getSpeakersFullList());
 
@@ -25,8 +26,10 @@ module.exports = (param) => {
 
       return res.render('index', {
         page: 'Home',
-        speakerslist: results[0],
-        speakersfull: results[1]
+        pageId: 'home',
+        plenary: results[0],
+        speakerslist: results[1],
+        speakersfull: results[2]
       });
     } catch(err) {
       return next(err);

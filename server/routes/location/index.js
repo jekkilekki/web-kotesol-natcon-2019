@@ -4,7 +4,8 @@ const router = express.Router();
 module.exports = () => {
   router.get( '/', (req, res, next ) => {
     return res.render( 'location', {
-      page: 'Location'
+      page: 'Location',
+      pageId: 'location'
     });
   });
 

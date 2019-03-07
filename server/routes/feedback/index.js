@@ -10,6 +10,7 @@ module.exports = (param) => {
       const feedbacklist = await feedbackService.getAllFeedback();
       return res.render( 'feedback', {
         page: 'Leave Your Feedback',
+        pageId: 'feedback',
         feedbacklist,
         success: req.query.success
       });
@@ -28,6 +29,7 @@ module.exports = (param) => {
       if( !fbName || !fbTitle || !fbMsg ) {
         return res.render( 'feedback', {
           page: 'Leave Your Feedback',
+          pageId: 'feedback',
           error: true,
           fbName,
           fbTitle,

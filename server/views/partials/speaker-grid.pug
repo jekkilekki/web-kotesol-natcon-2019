@@ -15,11 +15,18 @@ ul.grid
         .speaker-meta-box
           .speaker-meta.grid-layout
             a(href=`/speakers/${speaker.shortname}`)
-              p.speaker-name=speaker.name
-            p.speaker-affiliation
-              !=speaker.affiliation
-            p.speaker-details
-              !=speaker.details 
+              p.speaker-name=speaker.title
+            //- p.speaker-affiliation
+            //-   !=speaker.affiliation
+            //- p.speaker-details
+            //-   !=speaker.details 
+      .speaker-meta-visible
+          //- a(href=`/speakers/${speaker.shortname}`)
+          p.speaker-name=speaker.name
+          p.speaker-affiliation
+            !=speaker.affiliation
+          p.speaker-details
+            !=speaker.details
 
   //-   .speaker-info-section
   //-     article.speaker

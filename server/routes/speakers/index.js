@@ -15,8 +15,30 @@ module.exports = (param) => {
 
       return res.render( 'speakers', {
         page: 'All Speakers',
+        pageId: 'speakers',
         speakerslist: results[0],
         speakersfull: results[1]
+      });
+    } catch(err) {
+      return next(err);
+    }
+  });
+
+  router.get( '/plenary/:name', async (req, res, next) => {
+    try {
+      const promises = [];
+      promises.push(speakerService.getPlenarySpeaker(req.params.name));
+
+      const results = await Promise.all(promises);
+
+      if( !results[0] ) {
+        return next();
+      }
+
+      return res.render( 'speaker-single', {
+        page: req.params.name,
+        pageId: 'speaker-single',
+        speaker: results[0]
       });
     } catch(err) {
       return next(err);
@@ -36,6 +58,7 @@ module.exports = (param) => {
 
       return res.render( 'speaker-single', {
         page: req.params.name,
+        pageId: 'speaker-single',
         speaker: results[0]
       });
     } catch(err) {
