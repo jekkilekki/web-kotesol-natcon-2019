@@ -9,6 +9,7 @@ const feedbackRoute = require( './feedback' );
 const ticketsRoute = require( './tickets' );
 const teamRoute = require( './team' );
 const conductRoute = require( './conduct' );
+const privacyRoute = require( './privacy' );
 const chatRoute = require( './chat' );
 
 module.exports = (param) => {
@@ -44,6 +45,7 @@ module.exports = (param) => {
   router.use( '/tickets', ticketsRoute(param) );
   router.use( '/team', teamRoute(param) );
   router.use( '/code-of-conduct', conductRoute(param) );
+  router.use( '/privacy', privacyRoute(param) );
   router.use( '/chat', chatRoute(param) );
 
   return router;

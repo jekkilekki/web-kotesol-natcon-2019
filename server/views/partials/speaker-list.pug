@@ -1,18 +1,28 @@
 .container
   article
     .speaker-list
-      h2.section-title More Speakers
       .grid
         //
           <div class="grid-item grid-title">
           <div class="grid-inner"><a href="/speakers"><span>More</span> Speakers</a></div>
           </div>
-        each speaker in speakerNames
+        each speaker in speakers
           .grid-item.photo
-            .grid-inner(style="background-image: url('/img/people/#')")
+            .grid-inner(style=`background-image: url('/img/people/${speaker.img}')`)
               .speaker-meta-box
-                .speaker-meta
-                  a(href=`/speakers/${speaker.shortname}`)
-                    p.speaker-name=speaker.name
-                  p.speaker-affiliation #
-                  p.speaker-details #
+                //- .speaker-meta.grid-layout
+                  //- a(href=`/speakers/${speaker.shortname}`)
+                    //- p.speaker-name= speaker.name
+                  //- p.speaker-affiliation= speaker.affiliation
+                  //- p.speaker-details= speaker.details
+            .speaker-meta-visible
+              //- a(href=`/speakers/${speaker.shortname}`)
+              p.speaker-name=speaker.name
+              p.speaker-affiliation
+                !=speaker.affiliation
+              p.speaker-details
+                !=speaker.details
+          .speaker-topic
+            h3.speaker-name= speaker.name
+            h4.speaker-title= speaker.title
+            p.speaker-abstract= speaker.summary
