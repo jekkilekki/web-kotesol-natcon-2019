@@ -523,6 +523,7 @@ li {
 --------------------------------------------------------------*/
 .with-call {
   transform: translateY(110px);
+  height: calc(100% - 110px);
 }
 
 .call-to-action {
@@ -1391,7 +1392,7 @@ header.page-section {
   background: linear-gradient(to bottom, #201b48 0%,#161637 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#201b48', endColorstr='#161637',GradientType=0 ); /* IE6-9 */
   color: white;
-  padding: 2rem 0;
+  padding: 2rem 0 8rem;
 }
 
 .plenary figure {
@@ -1670,8 +1671,15 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
  * Schedule Page
  * -----------------------------------------------------------------------------
  */
-.with-call .schedule {
+.with-call .schedule,
+.with-call .conference-map,
+.with-call .site-footer,
+.with-call .site-credits {
   transform: translateY(-110px);
+}
+
+.conference-map .section-title {
+  transform: translateY(100px);
 }
 
 .schedule {
