@@ -1073,7 +1073,7 @@ body {
   margin: 0;
   position: relative;
   width: 100%; 
-  max-height: 1500px;
+  max-height: 1400px;
   /* height: 50vw; */
   overflow: hidden;
 }
@@ -1308,11 +1308,11 @@ header.page-section {
 }
 
 .page-button {
-  background: white;
+  background: transparent;
   color: #00f2e6;
-  border: 1px solid #00f2e6;
+  border: 1px solid rgba(0, 242, 230, 0.5);
   border-radius: 3px;
-  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.36);
+  /* box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.36); */
   cursor: pointer;
   font-size: 1.1rem;
   /* line-height: 2.6rem; */
@@ -1320,11 +1320,13 @@ header.page-section {
   display: inline-block;
   font-family: "Roboto Condensed", "Fira Sans Extra Condensed", sans-serif;
   text-transform: uppercase;
+
 }
 
 .page-button:hover {
-  background: #00f2e6;
-  color: white;
+  /* background: #00f2e6;
+  color: white; */
+  border: 1px solid rgba(0, 242, 230, 1);
 }
 
 /* .site-content:before,
@@ -1871,6 +1873,34 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   font-family: "Open Sans Condensed", sans-serif;
   font-weight: bold!important;
 }
+
+.schedule-span.outline {
+  padding: 0.75rem;
+  /* color: white; */
+  background: rgba(255, 172, 50, 0.8);
+  /* text-align: left; */
+}
+
+/* .schedule-span.outline1 {
+  background: rgba(213, 22, 76, 0.9);
+  
+}
+
+.schedule-span.outline2 {
+  background: rgba(213, 22, 76, 0.8); /* Pink-dark #ec174f 
+}
+
+.schedule-span.outline3 {
+  background: rgba(213, 22, 76, 0.9);
+}
+
+.schedule-span.outline4 {
+  background: rgba(213, 22, 76, 0.8);
+}
+
+.schedule-span.outline5 {
+  background: rgba(213, 22, 76, 0.9);
+} */
 
 .schedule-span span {
   text-transform: lowercase;
@@ -2546,6 +2576,40 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00aabb', end
   display: flex;
 }
 
+.about-us {
+  float: left;
+  display: block;
+  margin-right: 6%;
+  width: 80%;
+  margin-bottom: 0;
+}
+
+.about-us h3 {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+}
+
+.about-us p {
+  font-size: 1rem;
+}
+
+.footer-navigation {
+  float: left;
+  display: block;
+  margin-right: 6%;
+  width: 20%;
+}
+
+.footer-navigation ul:first-child:after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 2px;
+  margin: 1rem 0;
+  border-radius: 5px;
+  background: white;
+}
+
 .site-footer .container ul {
   flex: 1 1 30%;
   list-style: none;
@@ -2565,13 +2629,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00aabb', end
 
 @media screen and (min-width: 36rem) {
   .conference-details-nav a {
-    font-size: 1rem;
+    /* font-size: 1rem; */
   }
 }
 
 @media screen and (min-width: 56rem) {
   .conference-details-nav a {
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
   }
 }
 
@@ -2615,6 +2679,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00aabb', end
 .social-nav ul {
   list-style: none;
   text-align: center;
+  display: inline-block;
+  position: relative;
+  top: -13px;
+  margin-left: 1rem;
 }
 
 .social-nav ul li {
@@ -2627,7 +2695,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00aabb', end
   color: white;
   width: 30px;
   height: 30px;
-  font-size: 30px;
+  font-size: 20px;
   /* border: 2px solid; */
   line-height: 30px;
   text-align: center;
@@ -2684,6 +2752,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00aabb', end
   /* bottom: 3rem; */
   /* right: -1rem; */
   max-height: 30px;
+  display: inline-block;
   /* position: absolute; */
   /* -webkit-filter: grayscale(100%);
   filter: grayscale(100%); */
