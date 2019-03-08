@@ -381,6 +381,15 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 900;
 }
 
+section.page-section h1,
+section.page-section h2,
+section.page-section h3,
+section.page-section h4,
+section.page-section h5,
+section.page-section h6 {
+  color: #371E83;
+}
+
 h1 {
   font-size: 2.6rem;
 }
@@ -481,7 +490,8 @@ hr.accent {
 /*--------------------------------------------------------------
 # Lists
 --------------------------------------------------------------*/
-ul, ol {
+section.page-section ul, 
+section.page-section ol {
   padding-left: 1rem;
   opacity: 0.8;
   font-weight: 300;
@@ -539,6 +549,7 @@ li {
     padding: 1rem 2rem;
     border-radius: 10px;
     color: #60f;
+    /* color: #371e83; */
     background: #e1e1e1;
 }
 
@@ -723,6 +734,10 @@ li {
   transition: all 0.3s;
 }
 
+.mobile-menu.active .site-menu ul {
+  opacity: 1;
+}
+
 .mobile-menu.active .site-menu li {
   padding: 0;
   display: inline;
@@ -904,6 +919,12 @@ li {
     margin: 0 auto;
 }
 
+.conference-info a,
+.keypts a,
+.plenary a {
+  color: #00f2e6;
+}
+
 .conference-info p {
   opacity: 1;
 }
@@ -948,6 +969,7 @@ li {
 --------------------------------------------------------------*/
 a {
   color: #00f2e6;
+  color: #00aabb;
   text-decoration: none;
 }
 
@@ -1111,6 +1133,7 @@ body {
   line-height: 1rem;
   text-align: center;
   background: #00f2e6;
+  /* background: #00aabb; */
   padding: 5px 10px;
   border-radius: 3px;
   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.36);
@@ -1262,6 +1285,18 @@ a.ticket-button {
 .page-section {
   padding-top: 5rem;
   padding-bottom: 5rem;
+}
+
+header.page-section {
+  margin-top: 65px;
+  /* margin-bottom: 5rem; */
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#371e83+0,201b48+67,161637+100 */
+  background: #371e83; /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #371e83 0%, #201b48 67%, #161637 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #371e83 0%,#201b48 67%,#161637 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #371e83 0%,#201b48 67%,#161637 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#371e83', endColorstr='#161637',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  color: white;
 }
 
 .page-button-container {
@@ -2065,7 +2100,7 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 }
 
 .full-bleed {
-  margin: 2rem auto;
+  margin: 3rem auto;
 }
 
 .subscriber-list-title {
@@ -2166,8 +2201,11 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   /* opacity: 0.8; */
 }
 
-.keypoint h3 {
+.keypoint h3,
+.speakers .section-title,
+.schedule .page-section-title {
   text-align: center;
+  color: white!important;
 }
 
 .grid {
@@ -2494,6 +2532,12 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 
 .site-footer {
   background: #00f2e6;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#00aabb+0,00f2e6+100 */
+background: #00aabb; /* Old browsers */
+background: -moz-linear-gradient(-45deg, #00aabb 0%, #00f2e6 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, #00aabb 0%,#00f2e6 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, #00aabb 0%,#00f2e6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00aabb', endColorstr='#00f2e6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   color: white;
   padding: 4rem 0;
 }
@@ -2583,7 +2627,8 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   color: white;
   width: 30px;
   height: 30px;
-  border: 2px solid;
+  font-size: 30px;
+  /* border: 2px solid; */
   line-height: 30px;
   text-align: center;
   margin: 0 5px 0 0;
@@ -2592,10 +2637,11 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   /* -webkit-transform: rotate(45deg) translateX(5px) translateY(-5px);
   transform: rotate(45deg) translateX(5px) translateY(-5px); */
   transition: all 0.3s;
+  opacity: 0.8;
 }
 
-.social-nav li a:before {
-  font-family: FontAwesome;
+/* .social-nav li a:before {
+  font-family: FontAwesome, "Font Awesome", "Font Awesome Brands", "Font Awesome Solid";
   content: '\f230';
   display: inline-block;
   padding: 0 5px;
@@ -2604,8 +2650,8 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   font-size: 15px;
   text-indent: 3px;
   /* -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg); */
-}
+  transform: rotate(-45deg);
+} */
 
 @media screen and (min-width: 36rem) {
   .social-nav li a {
@@ -2619,9 +2665,11 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 }
 
 .social-nav li a:hover {
-  color: #00f2e6;
+  /* color: #00f2e6;
   box-shadow: 0px 6px 20px rgba(0,0,0,0.36);
-  background: white;
+  background: white; */
+  opacity: 1;
+  border: none;
 }
 
 .social-nav li a:focus,
@@ -2637,8 +2685,8 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   /* right: -1rem; */
   max-height: 30px;
   /* position: absolute; */
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
+  /* -webkit-filter: grayscale(100%);
+  filter: grayscale(100%); */
 }
 
 @media screen and (min-width: 46rem) {
@@ -2648,7 +2696,7 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   }
 }
 
-.social-nav a[href*='facebook.com']:before {
+/* .social-nav a[href*='facebook.com']:before {
   content: '\f230';
 }
 
@@ -2662,10 +2710,10 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 
 .social-nav a[href*='mailto:']:before {
   content: '\f0e0';
-}
+} */
 
 .site-credits {
-  background: #004369;
+  background: #232377;
   color: rgba(255,255,255,0.7);
   padding: 2rem 0 0.25rem;
   text-align: center;
@@ -2678,12 +2726,12 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 
 .site-credits a {
   font-weight: 400;
-  color: white;
+  /* color: white;
+  color: #00f2e6; */
 }
 
 .copyright {
   padding-bottom: 2rem;
-  border-bottom: 1px solid rgba(255,255,255, 0.5);
 }
 
 .copyright span {
@@ -2700,6 +2748,9 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   grid-template-columns: 1fr 1fr;
   justify-content: space-between;
   text-align: right;
+  border-top: 1px solid rgba(0, 242, 230, 0.5);
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .credits span:first-child {

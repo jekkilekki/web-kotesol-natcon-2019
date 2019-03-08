@@ -33,38 +33,47 @@ section.site-footer
       ul.social-nav-list
         li.social-nav-item
           a(href='http://facebook.com/jnjkotesol')
+            i.fab.fa-facebook
             span.screen-reader-text Facebook
         li.social-nav-item
           a(href='http://instagram.com/jnjkotesol')
+            i.fab.fa-instagram
             span.screen-reader-text Instagram
         li.social-nav-item
           a(href='http://koreatesol.org')
+            i.fas.fa-globe
             span.screen-reader-text KOTESOL
         li.social-nav-item
           a(href='mailto:jnj.presenters@gmail.com')
+            i.far.fa-envelope
             span.screen-reader-text Email
 footer.site-credits
   .container
     p.copyright
-      | &copy; 2018 JNJ KOTESOL. All rights reserved.
+      | &copy; 2019 JNJ KOTESOL. All rights reserved.
       span
-        | Coded by 
+        | Coded with ⚡️ by 
         a(href='https://aaron.kr') Aaron Snowberger
-        |  / Inspired by 
-        a(href='https://websummit.com/') Web Summit 2018
-      span.render-time=renderTime
-    p.credits
-      span
-        | Brain image by 
-        a(href='https://www.flickr.com/photos/flamephoenix1991/8376271918') _DJ_
-        |  from 
-        a(href='https://flickr.com') www.flickr.com
-        |  / 
-        a(href='https://creativecommons.org/licenses/by-sa/2.0/') CC BY-SA 2.0
-      span
-        | Icons by 
-        a(href='https://www.flaticon.com/authors/becris', title='Brainstorming') Brainstorming
-        |  from 
-        a(href='https://www.flaticon.com/', title='Flaticon') www.flaticon.com
-        |  / 
-        a(href='http://creativecommons.org/licenses/by/3.0/', title='Creative Commons BY 3.0', target='_blank') CC BY 3.0
+        br
+        |  Inspired by 
+        a(href='https://thenextweb.com/conference/') The Next Web Conference 
+        | and 
+        a(href='https://infinite.red/ChainReactConf/') Chain React Conference
+      //- span.render-time=renderTime
+    if pageId === 'home'
+      p.credits
+        //- span
+        //-   | Brain image by 
+        //-   a(href='https://www.flickr.com/photos/flamephoenix1991/8376271918') _DJ_
+        //-   |  from 
+        //-   a(href='https://flickr.com') www.flickr.com
+        //-   |  / 
+        //-   a(href='https://creativecommons.org/licenses/by-sa/2.0/') CC BY-SA 2.0
+        //- br
+        span
+          | Icons by 
+          a(href='https://www.flaticon.com/authors/becris', title='Brainstorming') Brainstorming
+          |  from 
+          a(href='https://www.flaticon.com/', title='Flaticon') www.flaticon.com
+          |  / 
+          a(href='http://creativecommons.org/licenses/by/3.0/', title='Creative Commons BY 3.0', target='_blank') CC BY 3.0

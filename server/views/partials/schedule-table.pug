@@ -1,6 +1,7 @@
 // Schedule
 .conference-schedule.container.small
-  h2.page-section-title Conference Schedule
+  if pageId !== 'schedule'
+    h2.page-section-title Conference Schedule
   table.schedule-section
     tr.schedule-header
       th.schedule-time Time
