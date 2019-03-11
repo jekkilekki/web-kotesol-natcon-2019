@@ -1,23 +1,43 @@
 include call
-.site-banner.flex-it
-  hgroup.site-title
-    a(href='/')
-      img.logo-image(src='/img/kotesol-logo.png')
+.site-banner.top
+  //- hgroup.site-title
+  //-   a(href='/')
+  //-     img.logo-image(src='/img/kotesol-logo.png')
   header
     .header-top
-      h1
-        span.screen-reader-text KOTESOL 
-        | 2019 National Conference
+      //- hgroup.site-title
+      //-   a(href='/')
+      //-     img.logo-image(src='/img/kotesol-logo.png')
+      hgroup  
+        h1
+          span.site-title
+            a(href='/')
+              img.logo-image(src='/img/kotesol-logo.png')
+          span.screen-reader-text KOTESOL 
+          span.site-title-text 2019 National Conference
       .banner-right
-        p.banner-location
-          | May 25, 2019 / 9am
-          br
-          a(href='/location') Jeonju
-        .top-buttons
-          a.button.ticket-button(href='/tickets') Tickets
-          button.site-mobile-menu-button.show.not-home
-            i.fa.fa-bars
-            |  Menu
+        .box
+          p.banner-location
+            | May 25, 2019 / 9am
+            br
+            a(href='/location') Jeonju
+          .top-buttons
+            a.button.ticket-button(href='/tickets') Tickets
+            button.site-mobile-menu-button.not-home
+              i.fa.fa-bars
+              |  Menu
+    .header-bottom
+      ul.center
+          li.site-menu-item
+            a(href='/speakers') Speakers
+          li.site-menu-item
+            a(href='/schedule') Schedule
+          li.site-menu-item
+            a(href='/location') Location
+          li.site-menu-item
+            a(href='/sponsors') Sponsors
+          li.site-menu-item
+            a(href='/feedback') Feedback
 nav.site-navigation.mobile-menu
   ul.site-menu
     .container
