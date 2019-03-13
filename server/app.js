@@ -9,11 +9,13 @@ const configs = require( './config' );
 const db = require('./lib/db');
 const SpeakerService = require( './services/SpeakerService' );
 const FeedbackService = require( './services/FeedbackService' );
+const DataService = require( './services/DataService' );
 const app = express();
 
 const config = configs[app.get('env')];
 const speakerService = new SpeakerService(config.data.speakers);
 const feedbackService = new FeedbackService(config.data.feedback);
+const dataService = new DataService(config.data.data);
 
 app.set( 'port', process.env.PORT || 3000 );
 
@@ -57,7 +59,8 @@ app.use(async(req, res, next) => {
 // Setup Routes
 app.use( '/', routes({
   speakerService,
-  feedbackService
+  feedbackService,
+  dataService
 }) );
 app.use(( req, res, next ) => {
   return next( createError( 404, 'File not found' ) );

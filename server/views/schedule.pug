@@ -3,10 +3,11 @@ extends layout/index
 block content
   header.page-section
     .container
-      h2.section-title Schedule
+      h2.page-section-title Schedule
       p.section-subtitle.center 
         | Explore the themes our speakers will discuss. 
         //- br
         | From pedagogy to technology, there's a track for everyone.
-  include partials/schedule-table
+  //- include partials/schedule-table
+  include partials/schedule-table-outline
   include partials/speaker-grid

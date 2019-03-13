@@ -1311,13 +1311,14 @@ a.ticket-button {
 }
 
 .page-section {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  /* padding-top: 5rem; */
+  padding-bottom: 6rem;
 }
 
 header.page-section {
   margin-top: 76px;
-  /* margin-bottom: 5rem; */
+  margin-bottom: 6rem;
+  padding-top: 6rem;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#232377+0,201b48+67,161637+100 */
   background: #232377; /* Old browsers */
   background: -moz-linear-gradient(-45deg, #232377 0%, #201b48 67%, #161637 100%); /* FF3.6-15 */
@@ -1339,7 +1340,7 @@ header.page-section {
   background: transparent;
   color: #00dddd;
   border: 1px solid rgba(0, 242, 230, 0.5);
-  border-radius: 3px;
+  border-radius: 30px;
   /* box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.36); */
   cursor: pointer;
   font-size: 1.1rem;
@@ -1420,6 +1421,12 @@ header.page-section {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#201b48', endColorstr='#161637',GradientType=0 ); /* IE6-9 */
   color: white;
   padding: 2rem 0 8rem;
+}
+
+#speakers .plenary {
+  background: transparent;
+  color: #201b48;
+  padding-top: 0;
 }
 
 .plenary figure {
@@ -2150,13 +2157,13 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   text-align: center;
   margin-top: 0;
   text-shadow: 0px 2px 4px rgba(0,0,0,0.36);
-  padding-top: 2rem;
+  /* padding-top: 2rem; */
   color: white;
 }
 
 @media screen and (min-width: 26rem) {
   .page-section-title {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
   }
 }
 
@@ -3411,16 +3418,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00aabb', end
 }
 
 #location .full-bleed {
-  margin-top: 0;
+  margin-top: -6rem;
 }
 
-#location .page-section-title,
+/* #location .page-section-title,
 .feedback .page-section-title {
   text-align: left;
   color: white;
   text-shadow: 0px 2px 4px rgba(0,0,0,0.36);
   padding-top: 2rem;
-}
+} */
 
 .conference-directions .meta-info {
   position: absolute;
@@ -3570,7 +3577,7 @@ h2.accomodation {
     font-weight: normal;
   } */
 
-  .button-inverse {
+  .button-inverse:hover {
     background: white;
     color: #00dddd;
   }
@@ -3582,7 +3589,7 @@ h2.accomodation {
     color: #00dddd;
   }
 
-  .button-inverse:hover {
+  .button-inverse {
     background: #00dddd;
     color: white;
   }
@@ -4186,9 +4193,14 @@ h4.sponsor-section-title {
 
 .ticket {
   border: 1px solid #ccc;
-  box-shadow: 0px 0px 4px rgba(0,0,0,0.14);
+  box-shadow: 0px 10px 20px rgba(0,0,0,0.14);
   padding-top: 1rem;
   background: white;
+  border-radius: 30px;
+}
+
+.ticket p {
+  opacity: 1;
 }
 
 .ticket:hover {
@@ -4224,7 +4236,8 @@ h4.sponsor-section-title {
 .ticket .ticket-type {
   color: #004369;
   font-size: 2rem;
-  font-weight: 500;
+  font-weight: 700;
+  font-family: "Open Sans Condensed", san-serif;
 }
 
 .ticket .ticket-price {

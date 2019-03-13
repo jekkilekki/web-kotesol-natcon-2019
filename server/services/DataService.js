@@ -39,9 +39,9 @@ class DataService {
     return data.map((member) => {
       return {
         name: member.name,
-        title: member.shortname,
-        email: member.nickname,
-        site: member.affiliation,
+        title: member.title,
+        email: member.email,
+        site: member.site,
         bio: member.bio,
         img: member.img,
       };
