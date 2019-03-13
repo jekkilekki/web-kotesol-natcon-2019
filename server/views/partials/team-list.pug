@@ -1,5 +1,5 @@
 .container.small
-  h2.section-title Organizing Team
+  //- h2.section-title Organizing Team
   // http://davist11.github.io/css-diamond-grid/#
   .grid.team-grid
     each member in team
@@ -14,9 +14,10 @@
           .attendee-img-shadow-yellow
         .speaker-info-section
           .speaker-info
-            h3.speaker-bio-title member.title
-            p.team-member-title member.title
-            p.speaker-bio member.bio
+            h3.speaker-bio-title= member.name
+            p.team-member-title= member.title
+            p.speaker-bio
+              != member.bio
         // .speaker-info-section
       // .team-member
       // <a class="page-button button">Register today!</a>

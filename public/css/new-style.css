@@ -432,6 +432,15 @@ h2.section-title:after {
   left: 25%;
 } */
 
+.section-subtitle{
+  font-size: 1.4rem;
+  max-width: 40rem;
+  margin: 0 auto;
+  /* font-style: italic; */
+  opacity: 0.4;
+  font-weight: 100;
+}
+
 h3 {
   font-size: 1.8rem;
 }

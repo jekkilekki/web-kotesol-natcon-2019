@@ -15,7 +15,7 @@ const app = express();
 const config = configs[app.get('env')];
 const speakerService = new SpeakerService(config.data.speakers);
 const feedbackService = new FeedbackService(config.data.feedback);
-const dataService = new DataService(config.data.data);
+const dataService = new DataService(config.data.team);
 
 app.set( 'port', process.env.PORT || 3000 );
 
