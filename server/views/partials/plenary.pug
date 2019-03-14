@@ -5,10 +5,11 @@ section.plenary
     each speaker in plenary
       .grid-it-2
         figure
-          img.plenary-img.speaker(src=`${speaker.img}`)
+          img.plenary-img.speaker(src=`${speaker.plenaryimg}`)
         .plenary-info
           hgroup
-            h3.plenary-name=speaker.name
+            a(href=href=`/speakers/plenary/${speaker.shortname}`)
+              h3.plenary-name=speaker.name
             h4.plenary-topic=speaker.title
           .abstract 
             //- h5.abstract Abstract

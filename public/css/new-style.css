@@ -579,7 +579,7 @@ li {
   top: 0;
   width: 100%;
   background: #201b48;
-  background: transparent;
+  /* background: transparent; */
   /* font-weight: bold; */
   /* text-align: right; */
   color: white;
@@ -588,6 +588,21 @@ li {
   /* margin-bottom: 65px; */
   /* border-bottom: 5px solid #00dddd; */
   box-shadow: 0px 1px 4px rgba(0,0,0,0.14);
+  transition: all 0.3s;
+}
+
+.site-banner * {
+  transition: all 0.3s;
+}
+
+#home .site-banner.top,
+#home .site-banner.top .header-top,
+#home .site-banner.top .site-title,
+#home .site-banner.top .header-bottom {
+  background: transparent;
+  box-shadow: none;
+  height: 100px;
+  transition: all 0.3s;
 }
 
 /* .site-banner.with-call {
@@ -2550,6 +2565,10 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   position: relative;
 }
 
+.discoverjeonju h2 {
+  margin-bottom: 2rem;
+}
+
 @media screen and (max-width: 66rem) {
   .googlemap iframe {
     width: calc( 100% - 8rem )!important;
@@ -4390,14 +4409,6 @@ h4.sponsor-section-title {
   box-shadow: 0 0 40px rgba(0,0,0,0.2);
   height: 76px;
 }
-
-#home .header-top,
-#home .site-title {
-  background: transparent;
-  box-shadow: none;
-}
-
-
 
 .header-top h1 {
   display: inline-block;

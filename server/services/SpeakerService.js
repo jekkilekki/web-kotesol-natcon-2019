@@ -24,6 +24,7 @@ class SpeakerService {
         nickname: plenary.nickname,
         affiliation: plenary.affiliation,
         img: plenary.img,
+        plenaryimg: plenary.plenaryimg,
         title: plenary.title,
         summary: plenary.summary,
         abstract: plenary.abstract,

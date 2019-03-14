@@ -18,6 +18,33 @@ $( '.benefit-title' ).click( function() {
   }
 });
 
+/* Back to Top Button */
+$( document ).ready( function() {
+  var offset = 100;
+  var speed = 250;
+  var duration = 500;
+  $( window ).scroll( function() {
+    if ( $(this).scrollTop() < offset ) {
+      $( '.topbutton' ).fadeOut( duration );
+      if ( $( 'body' ).attr('id') == 'home' ) {
+        $( '.site-banner' ).addClass( 'top' );
+      }
+    } else {
+      $( '.topbutton' ).fadeIn( duration );
+      $( '.site-banner' ).removeClass( 'top' );
+    }
+  });
+  $( '.topbutton' ).on( 'click', function() {
+    $( 'html, body' ).animate({ scrollTop: 0 }, speed );
+    return false;
+  });
+
+  /* Index page - top bar */
+  // if( $( 'body' ).id( 'home' ) ) {
+  //   $(window)
+  // }
+});
+
 /**
  * Date Countdown timer
  * @link https://codepen.io/chrisjdesigner/pen/dMbmoE
