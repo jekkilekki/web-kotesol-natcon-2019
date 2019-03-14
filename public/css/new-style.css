@@ -713,9 +713,9 @@ li {
   font-weight: 600;
 }
 
-@media screen and (max-width: 38rem) {
-  .banner-location {
-    display: none;
+@media screen and (max-width: 60rem) {
+  .header-top .banner-location {
+    visibility: hidden;
   }
 }
 
@@ -1206,6 +1206,7 @@ a.ticket-button {
   font-weight: 400;
   padding: 4px 15px;
   margin-left: 0.5rem;
+  top: 5px;
 }
 
 .site-menu-bar.smaller .ticket-button {
@@ -1735,6 +1736,10 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 .with-call .site-credits {
   transform: translateY(-110px);
 } */
+
+.conference-map {
+  padding: 0;
+}
 
 .conference-map .section-title {
   transform: translateY(100px);
@@ -2561,12 +2566,12 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   background-color: #004369;
   text-align: center;
   padding: 8rem;
-  color: white;
   position: relative;
 }
 
 .discoverjeonju h2 {
   margin-bottom: 2rem;
+  color: white!important;
 }
 
 @media screen and (max-width: 66rem) {
@@ -4512,4 +4517,24 @@ h4.sponsor-section-title {
 #countdown .label {
   margin-top: -5px;
   width: 100px;
+}
+
+.topbutton {
+  position: fixed;
+  z-index: 100;
+  color: white;
+  bottom: 0;
+  right: 0;
+  background: transparent;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  padding-top: 0.55rem;
+  text-shadow: -1px -1px 2px rgba(0,0,0,0.14);
+  transition: 0.3s all;
+  cursor: pointer;
+}
+
+.topbutton:hover {
+  
 }
