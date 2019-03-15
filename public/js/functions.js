@@ -6,6 +6,10 @@ $( '.site-mobile-menu-button' ).click( function() {
   }
 });
 
+$( '.site-navigation.mobile-menu .site-menu' ).on( 'click', function() {
+  $( '.site-navigation.mobile-menu' ).removeClass( 'active' );
+});
+
 $( '.benefit-title' ).click( function() {
   if ( $(this).hasClass( 'active' ) ) {
     var elem = $(this);
@@ -23,6 +27,20 @@ $( document ).ready( function() {
   var offset = 100;
   var speed = 250;
   var duration = 500;
+
+  /* Initial page load */
+  // buttonAndBanner( )
+
+  if ( $(window).scrollTop() < offset ) {
+    $( '.topbutton' ).fadeOut( duration );
+    if ( $( 'body' ).attr('id') == 'home' ) {
+      $( '.site-banner' ).addClass( 'top' );
+    }
+  } else {
+    $( '.topbutton' ).fadeIn( duration );
+    $( '.site-banner' ).removeClass( 'top' );
+  }
+
   $( window ).scroll( function() {
     if ( $(this).scrollTop() < offset ) {
       $( '.topbutton' ).fadeOut( duration );

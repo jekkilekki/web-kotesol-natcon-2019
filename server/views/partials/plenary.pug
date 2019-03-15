@@ -1,26 +1,25 @@
-section.plenary
-  .container
-    h2.section-title Plenary Speaker
-    //- img.plenary-img.speaker(src='/img/people/jackrichards.png')
-    each speaker in plenary
-      .grid-it-2
-        figure
-          img.plenary-img.speaker(src=`${speaker.plenaryimg}`)
-        .plenary-info
-          hgroup
-            a(href=href=`/speakers/plenary/${speaker.shortname}`)
-              h3.plenary-name=speaker.name
-            h4.plenary-topic=speaker.title
-          .abstract 
-            //- h5.abstract Abstract
-            p
-              !=speaker.summary
-              | &nbsp;
-              a.read-more(href=`/speakers/plenary/${speaker.shortname}`) Read more &rarr;
-            hr.accent
-            h5.bio 
-              //- | About #{speaker.nickname}
-            p
-              !=speaker.shortbio
-            a(href=`${speaker.website}`)=speaker.nickname 
-              | 's Website
+section.container
+  h2.section-title Plenary Speaker
+  //- img.plenary-img.speaker(src='/img/people/jackrichards.png')
+  each speaker in plenary
+    .grid-it-2
+      figure
+        img.plenary-img.speaker(src=`${speaker.plenaryimg}`)
+      .plenary-info
+        hgroup
+          a(href=href=`/speakers/plenary/${speaker.shortname}`)
+            h3.plenary-name=speaker.name
+          h4.plenary-topic=speaker.title
+        .abstract 
+          //- h5.abstract Abstract
+          p
+            !=speaker.summary
+            | &nbsp;
+            a.read-more(href=`/speakers/plenary/${speaker.shortname}`) Read more &rarr;
+          hr.accent
+          h5.bio 
+            //- | About #{speaker.nickname}
+          p
+            !=speaker.shortbio
+          a(href=`${speaker.website}`)=speaker.nickname 
+            | 's Website

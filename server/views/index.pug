@@ -29,12 +29,13 @@ block content
           li#days
             .number 00
             .label Days
-            svg.pie-plate(width='100', height='100')
+            //- Try to get these responsive with help from: https://codepen.io/jonespen/pen/tLhdy
+            svg.pie-plate(width='100', height='100', viewBox="0 0 100 100", preserveAspectRatio="xMinYMin meet")
               circle.pie(r='50', cx='50', cy='50')
           li#hours
             .number 00
             .label Hours
-            svg.pie-plate(width='100', height='100')
+            svg.pie-plate(width='100', height='100', preserveAspectRatio="xMinYMin meet")
               circle.pie(r='50', cx='50', cy='50')
           li#minutes
             .number 00
