@@ -21,5 +21,8 @@ section.container
             //- | About #{speaker.nickname}
           p
             !=speaker.shortbio
-          a(href=`${speaker.website}`)=speaker.nickname 
-            | 's Website
+          a.page-button.read-more(href=`${speaker.website}`) 
+            | Read more &rarr;
+          a.page-button(href=`${speaker.website}`)=speaker.nickname 
+            | 's Website&nbsp;&nbsp;
+            i.fas.fa-external-link-alt

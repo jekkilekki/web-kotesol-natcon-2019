@@ -1405,6 +1405,15 @@ header.page-section {
   border: 1px solid rgba(0, 242, 230, 1);
 }
 
+.page-button.read-more {
+  margin-right: 0.5rem;
+  padding-right: 2.5rem!important;
+}
+
+.page-button.opaque {
+  background: rgba(22, 22, 55 ,0.9);
+}
+
 /* .site-content:before,
 .site-content:after {
   display: block;
@@ -1780,7 +1789,7 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   /* width: 100vw;
   min-height: 60vh;
   height: auto; */
-  padding: 6rem auto;
+  padding: 6rem 0;
 }
 
 .schedule:before {
