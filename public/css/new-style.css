@@ -545,34 +545,72 @@ li {
 
 .call-to-action {
   background: #00b9f1;
+  background: #d63aff;
   color: white;
-  position: absolute;
-  top: -110px;
+  /* position: absolute; */
+  /* top: -110px; */
   width: 100%;
-  height: 110px;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  /* height: 110px; */
+  /* padding-left: 2rem;
+  padding-right: 2rem; */
+  margin: 0;
+  padding: 2rem 0;
+}
+
+.call-to-action p {
+  max-width: 70%;
 }
 
 .call-title {
-  font-size: 1.5rem;
-    margin-bottom: 0.25rem;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 .call-to-action .btn {
   position: absolute;
-    top: 50%;
-    right: 2em;
-    transform: translateY(-50%);
-    padding: 1rem 2rem;
-    border-radius: 10px;
-    color: #60f;
-    /* color: #232377; */
-    background: #e1e1e1;
+  top: 50%;
+  /* right: 2em; */
+  transform: translateY(-50%);
+  padding: 1.5rem 3rem;
+  border-radius: 10px;
+  /* color: #ed0972; */
+  color: #232377;
+  /* background: #d63aff; */
+  /* box-shadow: none; */
+  /* border: 1px solid #00dddd; */
+  border-radius: 50px;
+  /* text-shadow: none; */
+  font-size: 1.3rem;
+  color: white;
 }
 
 .call-to-action .container {
   position: relative;
+}
+
+@media screen and (max-width: 46rem) {
+  .call-to-action {
+    text-align: center;
+  }
+
+  .call-title {
+    text-align: center;
+  }
+
+  .call-to-action p {
+    max-width: 100%;
+  }
+
+  .call-to-action .btn {
+    position: relative;
+    top: 0;
+    /* transform: initial; */
+    /* margin: 42rem; */
+    display: inline-block;
+    /* top: 0; */
+    margin: 1.5rem auto -1rem;
+  }
 }
 
 .right {
@@ -827,8 +865,8 @@ li {
 .site-menu .container {
   position: absolute;
   left: 50%;
-  top: 5rem;
-  transform: translateX(-50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
   padding: 0;
   /* bottom: 0; */
 }
@@ -995,6 +1033,13 @@ li {
 .conference-info .page-subtitle {
   margin-top: 0;
   margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 30rem) {
+  .conference-info .page-subtitle {
+    font-size: 1.4rem;
+    margin-top: 1.4rem;
+  }
 }
 
 .conference-logo {
@@ -1231,6 +1276,12 @@ a.ticket-button {
   }
 }
 
+@media screen and (max-width: 30rem) {
+  a.ticket-button {
+    display: none;
+  }
+}
+
 .site-menu-bar.smaller .ticket-button {
   padding-top: 0.5rem!important;
   height: 30px;
@@ -1375,6 +1426,10 @@ header.page-section {
   color: white;
 }
 
+.page-icon {
+  width: 50px;
+}
+
 .page-button-container {
   margin-top: 1.5rem;
   display: block;
@@ -1408,6 +1463,7 @@ header.page-section {
 .page-button.read-more {
   margin-right: 0.5rem;
   padding-right: 2.5rem!important;
+  margin-bottom: 1rem;
 }
 
 .page-button.opaque {
@@ -1454,6 +1510,7 @@ header.page-section {
 
   .whatiskotesol dt img {
     margin: 2rem auto 0 auto;
+    max-width: 300px;
   }
 }
 
@@ -1503,6 +1560,13 @@ header.page-section {
   width: auto;
   overflow: hidden;
   object-fit: cover;
+}
+
+@media screen and (max-width: 46rem) {
+  .plenary-img {
+    max-height: 360px;
+    margin: 0 auto;
+  }
 }
 
 .page-callout {
@@ -1773,12 +1837,12 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 } */
 
 .conference-map {
-  padding: 0;
+  padding-top: 6rem;
 }
 
-.conference-map .section-title {
+/* .conference-map .section-title {
   transform: translateY(80px);
-}
+} */
 
 .schedule {
   background: url("../design/web/kotesol-natcon-2019-sky-only.jpg");
@@ -2068,9 +2132,9 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   background: #00dddd;
 }
 
-#schedule .conference-schedule .page-section-title {
+/* #schedule .conference-schedule .page-section-title {
   padding-top: 2rem;
-}
+} */
 
 #schedule .conference-schedule {
   padding-bottom: 2rem;
@@ -2594,8 +2658,8 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
     top: 0;
     left: 0;
     width: calc( 100% - 4rem )!important;
-    height: calc( 100% - 10rem )!important;
-    margin: 5rem 2rem;
+    height: 100%!important;
+    margin: 0rem 2rem;
 }
 
 .discoverjeonju {
@@ -2610,7 +2674,7 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   color: white!important;
 }
 
-@media screen and (max-width: 66rem) {
+/* @media screen and (max-width: 66rem) {
   .googlemap iframe {
     width: calc( 100% - 8rem )!important;
     height: calc(100% - 8rem )!important; 
@@ -2638,7 +2702,7 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   .discoverjeonju {
     padding: 3rem;
   }
-}
+} */
 
 .discoverjeonju:before {
   content: '';
@@ -2673,12 +2737,12 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 
 .site-footer {
   background: #00dddd;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#00aabb+0,00dddd+100 */
-background: #00aabb; /* Old browsers */
-background: -moz-linear-gradient(-45deg, #00aabb 0%, #00dddd 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(-45deg, #00aabb 0%,#00dddd 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(135deg, #00aabb 0%,#00dddd 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00aabb', endColorstr='#00dddd',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#00aabb+0,00dddd+100 
+background: #00aabb; /* Old browsers 
+background: -moz-linear-gradient(-45deg, #00aabb 0%, #00dddd 100%); /* FF3.6-15 
+background: -webkit-linear-gradient(-45deg, #00aabb 0%,#00dddd 100%); /* Chrome10-25,Safari5.1-6 
+background: linear-gradient(135deg, #00aabb 0%,#00dddd 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00aabb', endColorstr='#00dddd',GradientType=1 ); IE6-9 fallback on horizontal gradient */
   color: white;
   padding: 4rem 0;
 }
@@ -2719,6 +2783,31 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00aabb', end
   margin: 1rem 0;
   border-radius: 5px;
   background: white;
+}
+
+@media screen and (max-width: 30rem) {
+  .site-footer .container {
+    display: block;
+  }
+  .about-us,
+  .footer-navigation {
+    margin: -2rem 0;
+    width: 100%;
+    float: none;
+  }
+  .footer-navigation {
+    margin-top: 6rem;
+    display: flex;
+  }
+  .footer-navigation ul {
+    flex: 1 1 50%;
+  }
+  .footer-navigation ul:first-child:after {
+    height: 1px;
+    width: 200%;
+    position: absolute;
+    top: -3rem;
+  }
 }
 
 .site-footer .container ul {
@@ -3490,6 +3579,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00aabb', end
   margin-top: -6rem;
 }
 
+.venue-pdf {
+  margin-top: 2rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 /* #location .page-section-title,
 .feedback .page-section-title {
   text-align: left;
@@ -3530,8 +3626,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00aabb', end
 }
 
 h2.accomodation {
-  padding-top: 2rem;
-  margin-bottom: -1.5rem!important;
+  margin-bottom: 1rem;
 }
 
  /**
@@ -3544,9 +3639,9 @@ h2.accomodation {
   padding-bottom: 2rem;
 }
 
-#feedback .page-section-title {
+/* #feedback .page-section-title {
   padding-top: 0.5rem;
-}
+} */
 
 .feedback {
   padding-top: 2rem;
@@ -3718,9 +3813,9 @@ h2.accomodation {
     line-height: 1.4;
   }
 
-  #chat .page-section-title {
+  /* #chat .page-section-title {
     padding-top: 3px;
-  }
+  } */
 
   .chat {
     padding: 2rem 0;
@@ -3870,12 +3965,12 @@ h2.accomodation {
    left: 10px;
  } */
 
- #team .page-section-title {
+ /* #team .page-section-title {
    color: white;
    text-shadow: 0px 2px 4px rgba(0,0,0,0.36);
    padding-top: 2rem;
    padding-bottom: 2rem;
- }
+ } */
 
 @media screen and (min-width: 52rem) {
   .team-member {
@@ -3944,6 +4039,7 @@ h2.accomodation {
   padding-left: 0;
   margin-bottom: 2rem;
 /*   min-height: 300px; */
+  opacity: 1!important;
 }
 
 .sponsor-list-container .sponsor-list {
@@ -4140,7 +4236,7 @@ li.sponsor-list-item.hosting-parter {
   .hosting-partner .sponsor-logo {
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -30%);
     margin: 2rem 0;
   }
 }
@@ -4237,10 +4333,10 @@ h4.sponsor-section-title {
  * Tickets Page
  * -----------------------------------------------------------------------------
  */
-#tickets .section-subtitle {
+/* #tickets .section-subtitle {
   text-align: center;
   margin-top: -1rem;
-}
+} */
 
 #tickets .page-section:first-child {
   padding-bottom: 0;
@@ -4600,6 +4696,45 @@ h4.sponsor-section-title {
   .pie-plate {
     width: 70px;
     height: 70px;
+    display: none;
+  }
+  #countdown li:before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 50px;
+    top: 0;
+    left: -8px;
+    width: 1px;
+    border-radius: 30px;
+    background: white;
+  }
+  #countdown li:first-child:before {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 26rem) {
+  #countdown {
+    margin-top: -2rem;
+  }
+
+  #countdown li {
+    width: 50px;
+    height: 50px;
+  }
+  #countdown .number {
+    font-size: 1.2rem;
+    width: 50px;
+    margin-top: 0;
+  }
+  #countdown .label {
+    width: 50px;
+    font-size: 0.6rem;
+    font-weight: 300;
+  }
+  #countdown li:before {
+    height: 36px;
   }
 }
 
