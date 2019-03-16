@@ -558,7 +558,7 @@ li {
 }
 
 .call-to-action p {
-  max-width: 70%;
+  max-width: 65%;
 }
 
 .call-title {
@@ -570,7 +570,7 @@ li {
 .call-to-action .btn {
   position: absolute;
   top: 50%;
-  /* right: 2em; */
+  right: 2rem;
   transform: translateY(-50%);
   padding: 1.5rem 3rem;
   border-radius: 10px;
@@ -605,6 +605,7 @@ li {
   .call-to-action .btn {
     position: relative;
     top: 0;
+    right: 0;
     /* transform: initial; */
     /* margin: 42rem; */
     display: inline-block;
@@ -4399,7 +4400,7 @@ h4.sponsor-section-title {
 }
 
 .ticket .ticket-type {
-  color: #004369;
+  color: #232377;
   font-size: 2rem;
   font-weight: 700;
   font-family: "Open Sans Condensed", san-serif;
