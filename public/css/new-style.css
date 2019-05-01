@@ -415,6 +415,10 @@ h2.section-title {
   color: #00dddd; */
 }
 
+h2.section-title.white {
+  color: white;
+}
+
 /* h2.section-title:before,
 h2.section-title:after {
   content: "";
@@ -1838,7 +1842,7 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 } */
 
 .conference-map {
-  padding-top: 6rem;
+  padding-top: 4rem;
 }
 
 /* .conference-map .section-title {
@@ -2500,7 +2504,18 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   text-align: center;
   /* padding-top: 40%; */
   font-size: 1.2em;
-  filter: grayscale(1);
+  /* filter: grayscale(1); */
+}
+
+.grid-inner:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  background: rgba(214,58,255,0.3);
 }
 
 .grid-inner > a {
