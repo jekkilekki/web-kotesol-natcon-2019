@@ -2003,7 +2003,7 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   text-align: center;
 }
 
-@media screen and (min-width: 26rem) {
+@media screen and (min-width: 32rem) {
   .schedule-section {
     margin: 0 auto 2rem;
   }

@@ -41,19 +41,6 @@
       "media": [""]
     },
     {
-      "name": "Lemon Tree Cafe",
-      "description": "A Korean coffee shop located down on the road between Gaeksa and Hanok Village.",
-      "address": "전북 전주시 완산구 전라감영로 75",
-      "phone": "063-285-0005",
-      "map": "http://naver.me/5bbqCFuG",
-      "website": "",
-      "level": "silver",
-      "amount": "50,000",
-      "gift": "vouchers + donation",
-      "logo": "lemontree-logo.png",
-      "media": [""]
-    },
-    {
       "name": "Suhhee Kang",
       "description": "Jeonju North Jeolla's Vice President, running a private English tutoring business in town.",
       "address": "",
