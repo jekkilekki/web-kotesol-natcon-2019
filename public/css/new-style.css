@@ -1714,6 +1714,10 @@ header.page-section {
   font-size: 0.8rem;
 }
 
+.speaker-session strong {
+  color: #232377;
+}
+
 .speaker-meta .speaker-affiliation {
   margin-bottom: 0;
 }
@@ -1904,6 +1908,14 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 #home .schedule .info {
   color: white;
   text-shadow: 0px 0px 4px rgba(0,0,0,0.14);
+}
+
+#schedule .info {
+  color: rgba(35,35,119,0.7);
+  text-align: center;
+  text-shadow: none;
+  font-size: 0.9rem;
+  margin-top: -2rem;
 }
 
 .conference-schedule {
@@ -2140,6 +2152,19 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 /* #schedule .conference-schedule .page-section-title {
   padding-top: 2rem;
 } */
+
+#schedule .speakers-container {
+  padding-top: 4rem;
+  background: #161637;
+}
+
+#schedule .speakers-container .section-title {
+  color: white;
+}
+
+#schedule .speakers-container .speaker-affiliation {
+  color: white;
+}
 
 #schedule .conference-schedule {
   padding-bottom: 2rem;
@@ -2487,7 +2512,7 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 .grid-item:hover {
   /* background: #a0f; */
   /* border: 1px solid #00dddd; */
-  /* cursor: pointer; */
+  cursor: pointer;
 }
 
 .grid-inner {
@@ -2504,18 +2529,22 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   text-align: center;
   /* padding-top: 40%; */
   font-size: 1.2em;
-  /* filter: grayscale(1); */
+  /* filter: grayscale(0.7); */
 }
 
 .grid-inner:after {
   content: '';
+  display: block;
   position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
   bottom: 0;
-  z-index: 10;
-  background: rgba(214,58,255,0.3);
+  left: 0;
+  right: 0;
+  top: 60%;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,232377+100&0+0,1+100 */
+  background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(35,35,119,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(35,35,119,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(35,35,119,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#232377',GradientType=0 ); /* IE6-9 */
 }
 
 .grid-inner > a {
@@ -2580,6 +2609,13 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
     font-size: 2rem;
   }
 } */
+
+.grid-item .speaker-meta .speaker-title {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #00dddd!important;
+}
 
 .grid-item.photo img {
     /* margin-top: -60.5%; */
@@ -3129,8 +3165,28 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00aabb', end
     /* height: 100px; */
 }
 
+.speaker-list {
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+}
+
+.speaker-title,
+.plenary-topic {
+  color: #d63aff!important;
+}
+
+#home .plenary-topic {
+  color: white!important;
+}
+
 #speakers .grid {
   grid-template-columns: 1fr 3fr;
+}
+
+#speakers .speaker-meta-visible .speaker-name {
+  max-width: 70%;
+  margin: 0 auto;
+  text-align: center;
 }
 
 @media screen and (max-width: 36rem) {
@@ -3180,10 +3236,23 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00aabb', end
   grid-template-columns: 1fr 2fr;
 }
 
-#speakers .speaker-meta {
+#speakers .speaker-meta,
+#speaker-single .speaker-topic {
     visibility: visible;
     padding-left: 0px;
-    margin-bottom: 2rem;
+    color: rgba(35,35,119,0.7);
+    font-size: 1rem;
+}
+
+.speaker-track {
+  background: #00dddd;
+  color: white;
+  padding: 2px 12px;
+  border-radius: 20px;
+}
+
+.speaker-data {
+  font-size: 1rem;
 }
 
 #speakers .speaker .photo {
@@ -3227,10 +3296,21 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00aabb', end
 #speaker-single .speaker-meta .speaker-name {
   /* font-family: "Zilla Slab", "EB Garamond"; */
   font-size: 1.2rem;
-  font-weight: 500;
-  margin-bottom: 0;
+  /* font-weight: 500;
+  margin-bottom: 0; */
+  line-height: 0.8;
+  margin-bottom: 3rem;
 }
-
+.speaker-name a {
+  color: #232377;
+}
+.speaker-name .speaker-affiliation {
+  display: inline;
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin-left: 10px;
+  opacity: 0.6;
+}
 #speakers .speaker-meta .speaker-name a,
 #speaker-single .speaker-meta .speaker-name a {
     color: #004369;
@@ -3245,7 +3325,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00aabb', end
 
 #speakers .speaker-meta .speaker-session,
 #speaker-single .speaker-meta .speaker-session {
-    font-weight: 300;
+    /* font-weight: 300; */
     font-size: 1rem;
 }
 
@@ -3285,17 +3365,36 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00aabb', end
   grid-gap: 2rem;
 }
 
+#speakers .grid-item.photo,
 .speaker-photo-box {
   display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
 }
 
+#speakers .photo .grid-inner,
 .speaker-photo {
   display: block;
   width: 100%;
-  height: 250px;
+  height: 200px;
+  margin: 0;
   background-position: center;
   background-size: cover;
   z-index: 2;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .speaker-photo-box .attendee-img-shadow,
@@ -3390,11 +3489,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00aabb', end
 
 #speaker-single .speaker-meta .speaker-name {
   font-size: 2rem;
-  font-weight: 500;
+  /* font-weight: 500; */
 }
 
 #speaker-single .speaker-meta .speaker-session {
   font-size: 1.5rem;
+  color: #d63aff;
 }
 
  #speaker-single .speaker-bio-title,
@@ -3580,6 +3680,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00aabb', end
  #speaker-single .speaker-list .grid-item:nth-child(3),
  #speaker-single .speaker-list .grid-item:nth-child(4) {
     margin-top: 0%;
+ }
+
+ #speaker-single .page-button {
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
  }
 
 /**

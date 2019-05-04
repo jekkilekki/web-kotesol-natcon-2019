@@ -8,7 +8,11 @@ block content
         | Explore the themes our speakers will discuss. 
         //- br
         | From pedagogy to technology, there's a track for everyone.
-  //- include partials/schedule-table
-  include partials/schedule-table-outline
-  include partials/call
-  //- include partials/speaker-grid
+      .center.venue-pdf
+        a.button(href='/speakers') Meet our Speakers
+  include partials/schedule-table
+  //- include partials/schedule-table-outline
+  include partials/prereg
+  .speakers-container
+    .container
+      include partials/speaker-grid

@@ -21,7 +21,7 @@ section.container
             //- | About #{speaker.nickname}
           p
             !=speaker.shortbio
-          a.page-button.read-more(href=`${speaker.website}`) 
+          a.page-button.read-more(href=`/speakers/plenary/${speaker.shortname}`) 
             | Read more &rarr;
           a.page-button(href=`${speaker.website}`)=speaker.nickname 
             | 's Website&nbsp;&nbsp;
