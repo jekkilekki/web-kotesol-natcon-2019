@@ -1845,6 +1845,34 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   transform: translateY(-110px);
 } */
 
+.poster-section {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.poster {
+  background: rgba(0, 221,221, 0.9);
+  border-radius: 15px;
+  margin: 0 10px;
+  width: 25%;
+  padding: 10px 15px;
+}
+
+.poster .schedule-session, .poster .schedule-speaker {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.poster-note {
+  color: #161637;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  margin-bottom: 0.25rem;
+}
+
 .conference-map {
   padding-top: 4rem;
 }
@@ -3170,7 +3198,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00aabb', end
   padding-bottom: 4rem;
 }
 
-.speaker-title,
+.speaker-title a,
 .plenary-topic {
   color: #d63aff!important;
 }

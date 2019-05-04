@@ -34,7 +34,8 @@
           span.speaker-room= speaker.room 
           | &nbsp;&bull;&nbsp;
           span.speaker-time= speaker.time
-        h4.speaker-title= speaker.title
+        h4.speaker-title
+          a(href=`/speakers/${speaker.shortname}`)= speaker.title
         if speaker.topic
           p.speaker-meta= speaker.topic
             if speaker.subtopic
