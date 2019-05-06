@@ -4907,3 +4907,15 @@ h4.sponsor-section-title {
 .topbutton:hover {
   
 }
+
+/**
+ * Speaker Tracks - different colors
+ */
+.Plenary { background: #151537; }
+.Poster { background: #00dddd; }
+.Highlighted { background: #232377; }
+.Motivation { background: #F597A8; }
+.Skills { background: #00b9f1; }
+.Technology { background: #ed0972; }
+.Mixed { background: #d63aff; }
+.Research { background: #60f; }

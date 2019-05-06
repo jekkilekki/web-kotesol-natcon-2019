@@ -29,7 +29,17 @@
         p.speaker-data 
           //- span= speaker.topic
           //- span= speaker.subtopic
-          span.speaker-track= speaker.track
+          //- case speaker.track 
+          //-   when 'Highlighted': span.speaker-track(style="background: #232377;")= speaker.track
+          //-   when 'Motivation': span.speaker-track(style="background: #232377;")= speaker.track
+          //-   when 'Skills': span.speaker-track(style="background: #232377;")= speaker.track
+          //-   when 'Technology': span.speaker-track(style="background: #232377;")= speaker.track
+          //-   when 'Mixed': span.speaker-track(style="background: #232377;")= speaker.track
+          //-   when 'Research': span.speaker-track(style="background: #232377;")= speaker.track
+          //-   when 'Poster': span.speaker-track(style="background: #232377;")= speaker.track
+          //-   when 'Plenary': span.speaker-track(style="background: #232377;")= speaker.track
+          //- default: 
+          span.speaker-track(class=speaker.track)= speaker.track
           | &nbsp;&bull;&nbsp;
           span.speaker-room= speaker.room 
           | &nbsp;&bull;&nbsp;
