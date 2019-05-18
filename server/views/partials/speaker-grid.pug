@@ -7,26 +7,27 @@ ul.grid
   //-     a(href='/speakers') Speakers
   each speaker in speakers
     unless speaker.id == 'plenary'
-    // <article class="speaker">
-    li.grid-item.photo
-      .grid-inner(style=`background-image: url('${speaker.img}')`)
-        //- .attendee-img-shadow
-        //- .attendee-img-shadow-yellow
-        .speaker-meta-box
-          .speaker-meta.grid-layout
-            a(href=`/speakers/${speaker.shortname}`)
-              p.speaker-title= speaker.title
-            //- p.speaker-affiliation
-            //-   !=speaker.affiliation
-            //- p.speaker-details
-            //-   !=speaker.details 
-      .speaker-meta-visible
-          //- a(href=`/speakers/${speaker.shortname}`)
-          p.speaker-name=speaker.name
-          p.speaker-affiliation
-            !=speaker.affiliation
-          p.speaker-details
-            !=speaker.details
+      if speaker.status != 'canceled'
+        // <article class="speaker">
+        li.grid-item.photo
+          .grid-inner(style=`background-image: url('${speaker.img}')`)
+            //- .attendee-img-shadow
+            //- .attendee-img-shadow-yellow
+            .speaker-meta-box
+              .speaker-meta.grid-layout
+                a(href=`/speakers/${speaker.shortname}`)
+                  p.speaker-title= speaker.title
+                //- p.speaker-affiliation
+                //-   !=speaker.affiliation
+                //- p.speaker-details
+                //-   !=speaker.details 
+          .speaker-meta-visible
+              //- a(href=`/speakers/${speaker.shortname}`)
+              p.speaker-name=speaker.name
+              p.speaker-affiliation
+                !=speaker.affiliation
+              p.speaker-details
+                !=speaker.details
 
   //-   .speaker-info-section
   //-     article.speaker

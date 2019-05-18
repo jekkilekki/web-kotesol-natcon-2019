@@ -1250,7 +1250,7 @@ body {
   line-height: 1rem;
   text-align: center;
   background: #00dddd;
-  /* background: #00aabb; */
+  display: inline-block;  
   padding: 15px 30px;
   border-radius: 30px;
   box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.36);
@@ -1848,14 +1848,34 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 .poster-section {
   display: flex;
   margin-bottom: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .poster {
   background: rgba(0, 221,221, 0.9);
   border-radius: 15px;
-  margin: 0 10px;
-  width: 25%;
+  margin: 0 10px 10px;
+  width: 100%;
   padding: 10px 15px;
+}
+
+@media screen and (min-width: 30rem) {
+  .poster {
+    width: 45%;
+  }
+}
+
+@media screen and (min-width: 52rem) {
+  .poster {
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 60rem) {
+  .poster {
+    width: 14%;
+  }
 }
 
 .poster .schedule-session, .poster .schedule-speaker {
@@ -2135,6 +2155,7 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   color: #161637;
 }
 
+.room0 .schedule-session:before,
 .room1 .schedule-session:before,
 .room2 .schedule-session:before,
 .room3 .schedule-session:before,
@@ -2152,6 +2173,10 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   display: none;
 }
 
+.room0 .schedule-session:before {
+  content: "Onnuri";
+  background: #a9bac9;
+}
 .room1 .schedule-session:before {
   content: "Pedagogy";
   background: #00dddd;
@@ -2176,6 +2201,15 @@ clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
   content: "Other";
   background: #00dddd;
 }
+/*
+tr.room0 { background: rgba(35,35,119,0.7); } /* dark blue 
+tr.room1 { background: rgba(169,186,201,0.7); } /* grey 
+tr.room2 { background: rgba(245,151,168,0.7); } /* orange 
+tr.room3 { background: rgba(0,185,241,0.7); } /* blue 
+tr.room4 { background: rgba(237,9,114,0.7); } /* pink 
+tr.room5 { background: rgba(214,58,255,0.7); } /* purple 
+tr.room6 { background: rgba(102,0,255,0.7); } /* deep purple 
+*/
 
 /* #schedule .conference-schedule .page-section-title {
   padding-top: 2rem;
@@ -4912,6 +4946,7 @@ h4.sponsor-section-title {
  * Speaker Tracks - different colors
  */
 .Plenary { background: #151537; }
+.Onnuri { background: #a9bac9; }
 .Poster { background: #00dddd; }
 .Highlighted { background: #232377; }
 .Motivation { background: #F597A8; }

@@ -53,7 +53,8 @@ class SpeakerService {
         affiliation: speaker.affiliation,
         img: speaker.img,
         title: speaker.title,
-        summary: speaker.summary
+        summary: speaker.summary,
+        status: speaker.status
       };
     });
   }
@@ -81,7 +82,8 @@ class SpeakerService {
         media: speaker.media,
         website: speaker.website,
         email: speaker.email,
-        phone: speaker.phone
+        phone: speaker.phone,
+        status: speaker.status
       };
     });
   }
@@ -110,7 +112,8 @@ class SpeakerService {
       img: speaker.img,
       media: speaker.media,
       email: speaker.email,
-      phone: speaker.phone
+      phone: speaker.phone,
+      status: speaker.status
     }
   }
 
