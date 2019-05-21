@@ -192,6 +192,11 @@ hr {
 	height: 0;
 }
 
+hr.speaker-grid-line {
+  grid-column: span 2;
+  opacity: 0.5;
+}
+
 pre {
 	overflow: auto;
 }
@@ -1068,7 +1073,17 @@ li {
 }
 
 .conference-info .page-note {
-  margin: 2rem auto;
+  margin: 0.5rem auto;
+}
+@media screen and (min-width: 60rem) {
+  .conference-info .page-note {
+    margin: 1rem auto;
+  }
+}
+@media screen and (min-width: 60rem) {
+  .conference-info .page-note {
+    margin: 2rem auto;
+  }
 }
 
 .presented-by img {
@@ -3366,6 +3381,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00aabb', end
 .speaker-name a {
   color: #232377;
 }
+
+#speaker-single h3.speaker-name.coPresenter {
+  margin-top: -35px;
+}
+
+h3.speaker-name.coPresenter {
+  margin-top: -15px;
+  margin-bottom: 20px;
+  color: rgba(35,35,119,0.8);
+}
+
 .speaker-name .speaker-affiliation {
   display: inline;
   font-size: 1.2rem;
@@ -3373,6 +3399,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00aabb', end
   margin-left: 10px;
   opacity: 0.6;
 }
+
+h4.speaker-bio-title.coPresenter {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
 #speakers .speaker-meta .speaker-name a,
 #speaker-single .speaker-meta .speaker-name a {
     color: #004369;
@@ -3435,6 +3467,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00aabb', end
   border-radius: 50%;
   position: relative;
   overflow: hidden;
+}
+
+.speaker-photo-box.coPresenter {
+  position: absolute;
+  top: 140px;
+  left: -215px;
+  width: 160px;
+  height: 160px;
 }
 
 #speakers .photo .grid-inner,
@@ -4496,7 +4536,7 @@ h4.sponsor-section-title {
     margin: 0 auto;
     /* max-width: 300px; */
     position: absolute;
-    top: 95px;
+    top: 150px;
     left: 0;
     /*visibility: hidden;*/
 }
@@ -4954,3 +4994,32 @@ h4.sponsor-section-title {
 .Technology { background: #ed0972; }
 .Mixed { background: #d63aff; }
 .Research { background: #60f; }
+
+
+/* App store buttons */
+.app-stores {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  z-index: 10;
+}
+.app-stores .app-button {
+  width: 120px;
+  margin: 0 20px;
+  text-align: center;
+}
+@media screen and (min-width: 40rem) {
+  .app-stores .app-button {
+    width: 200px;
+    margin: 5px 20px;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 60rem) {
+  .app-stores .app-button {
+    width: 300px;
+    margin: 0 20px;
+    text-align: center;
+  }
+}

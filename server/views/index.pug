@@ -48,8 +48,16 @@ block content
             svg.pie-plate(width='100', height='100')
               circle.pie(r='50', cx='50', cy='50')
 
-      //- p.page-note 
-      //-   | Pre-registration closes May 17!
+      p.page-note 
+        | Get the Conference App!
+      .app-stores
+        .app-button
+          a(href='https://play.google.com/store/apps/details?id=com.jnjkotesol.conference')
+            img(src='/img/play-store.png')
+        .app-button
+          a(href='#')
+            img(src='/img/app-store.png')
+          p Coming soon!
       //-   br 
       //-   | Sign up now! 
       //-   a(href='https://koreatesol.org/content/2019-national-conference-pre-registration') Register
@@ -57,6 +65,7 @@ block content
         | Presented by
         a(href="https://koreatesol.org")
           img(src='/img/kotesol-logo.png')
+
   include partials/whatis
 
   section.page-section.keypts
@@ -89,8 +98,8 @@ block content
   section.page-section.sponsors 
     include partials/sponsors-list 
 
-  section.sponsors-call 
-    include partials/call-sponsors
+  //- section.sponsors-call 
+  //-   include partials/call-sponsors
 
   section.conference-map
     include partials/map 

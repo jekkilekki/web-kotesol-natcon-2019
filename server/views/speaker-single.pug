@@ -30,7 +30,12 @@ block content
               //- a(href=`/speakers/${speaker.shortname}`)=speaker.name
               if speaker.affiliation
                 span.speaker-affiliation= `(${speaker.affiliation})`
-            
+              if speaker.coPresenter
+                h3.speaker-name.coPresenter
+                  | + #{speaker.coPresenter}
+                  if speaker.coPresenterAff
+                    span.speaker-affiliation= `(${speaker.coPresenterAff})`
+
             h3.speaker-session
               strong Talk / 
               //- a(href=`/speakers/${speaker.shortname}`)
@@ -47,3 +52,10 @@ block content
                 h4.speaker-bio-title About #{speaker.nickname}
                 p.speaker-bio
                   !=speaker.bio
+                if speaker.coPresenterBio 
+                  h4.speaker-bio-title.coPresenter About #{speaker.coPresenter}
+                  p.speaker-bio
+                    !=speaker.coPresenterBio
+                    if speaker.coPresenterImg
+                      .speaker-photo-box.coPresenter
+                        .speaker-photo(style=`background-image: url('${speaker.coPresenterImg}')`)

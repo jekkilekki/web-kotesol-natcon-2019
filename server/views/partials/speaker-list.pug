@@ -28,6 +28,11 @@
               != speaker.name
             if speaker.affiliation
               span.speaker-affiliation= `(${speaker.affiliation})`
+          if speaker.coPresenter
+            h3.speaker-name.coPresenter
+              | + #{speaker.coPresenter}
+              if speaker.coPresenterAff
+                span.speaker-affiliation= `(${speaker.coPresenterAff})`
           p.speaker-data 
             //- span= speaker.topic
             //- span= speaker.subtopic
@@ -59,5 +64,15 @@
                 h4.speaker-bio-title About #{speaker.nickname}
                 p.speaker-bio
                   !=speaker.bio
+                if speaker.coPresenterBio 
+                  h4.speaker-bio-title.coPresenter About #{speaker.coPresenter}
+                  p.speaker-bio
+                    !=speaker.coPresenterBio
+                    if speaker.coPresenterImg
+                      .speaker-photo-box.coPresenter
+                        .speaker-photo(style=`background-image: url('${speaker.coPresenterImg}')`)
+
+      if speaker.status != 'canceled'
+        hr.speaker-grid-line
 
 

@@ -83,7 +83,12 @@ class SpeakerService {
         website: speaker.website,
         email: speaker.email,
         phone: speaker.phone,
-        status: speaker.status
+        status: speaker.status,
+        coPresenter: speaker.coPresenter,
+        coPresenterAff: speaker.coPresenterAff,
+        coPresenterBio: speaker.coPresenterBio,
+        coPresenterEmail: speaker.coPresenterEmail,
+        coPresenterImg: speaker.coPresenterImg
       };
     });
   }
@@ -113,7 +118,12 @@ class SpeakerService {
       media: speaker.media,
       email: speaker.email,
       phone: speaker.phone,
-      status: speaker.status
+      status: speaker.status,
+      coPresenter: speaker.coPresenter,
+      coPresenterAff: speaker.coPresenterAff,
+      coPresenterBio: speaker.coPresenterBio,
+      coPresenterEmail: speaker.coPresenterEmail,
+      coPresenterImg: speaker.coPresenterImg
     }
   }
 
