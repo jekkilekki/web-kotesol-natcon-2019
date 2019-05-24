@@ -1,11 +1,13 @@
 //- Page: Location
 extends layout/index
 block content
-  header.page-section
+  header.page-section(style="padding-bottom: 8rem")
     .container
       h2.page-section-title Conference Venue
       p.section-subtitle.center Jeonju University, Star Center 
       .center.venue-pdf
-        a.button(href='http://koreatesol.org/content/jeonju-venue-directions') Venue Directions PDF
+        a.button(href='http://kko.to/SUkczv0jB') View Jeonju Locations
+        p
+          small(style="opacity: 0.8") in KakaoMap
   include partials/directions
   include partials/map
